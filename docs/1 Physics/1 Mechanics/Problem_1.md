@@ -68,57 +68,8 @@ $R = \frac{v_0^2 \sin(2\theta)}{g}$
 ## 4. Implementation
 
 
+![alt text](image-1.png)
 
-import numpy as np
-import matplotlib.pyplot as plt
+![alt text](image-2.png)
 
-def calculate_range(v0, theta_deg, g):
-    theta_rad = np.radians(theta_deg)
-    return (v0**2 * np.sin(2 * theta_rad)) / g
-
-def simulate_projectile(v0, theta_deg, g, time_steps=100):
-    theta_rad = np.radians(theta_deg)
-    t = np.linspace(0, (2 * v0 * np.sin(theta_rad)) / g, time_steps)
-    x = v0 * np.cos(theta_rad) * t
-    y = v0 * np.sin(theta_rad) * t - 0.5 * g * t**2
-    return x, y
-
-g = 9.81
-v0_values = [10, 20, 30]
-theta_degrees = np.linspace(0, 90, 91)
-
-plt.figure(figsize=(10, 6))
-for v0 in v0_values:
-    ranges = [calculate_range(v0, theta, g) for theta in theta_degrees]
-    plt.plot(theta_degrees, ranges, label=f'v0 = {v0} m/s')
-
-plt.title('Projectile Range vs. Launch Angle')
-plt.xlabel('Launch Angle (degrees)')
-plt.ylabel('Range (meters)')
-plt.legend()
-plt.grid(True)
-plt.show()
-
-plt.figure(figsize=(10, 6))
-for v0 in v0_values:
-    x, y = simulate_projectile(v0, 45, g)
-    plt.plot(x, y, label=f'v0 = {v0} m/s')
-plt.title("Projectile Trajectory at 45 Degrees")
-plt.xlabel("Distance (m)")
-plt.ylabel("Height (m)")
-plt.grid(True)
-plt.legend()
-plt.show()
-
-v0 = 25;
-angles = [25, 45, 65]
-plt.figure(figsize = (10,6))
-for angle in angles:
-    x,y = simulate_projectile(v0, angle,g)
-    plt.plot(x,y, label = f'angle = {angle}')
-plt.title("Projectile Trajectory at varying angles")
-plt.xlabel("Distance (m)")
-plt.ylabel("Height (m)")
-plt.grid(True)
-plt.legend()
-plt.show()
+![alt text](image-3.png)
