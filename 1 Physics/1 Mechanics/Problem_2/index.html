@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 2 - Physics and Mathematics</title>
+<title>Investigating the Dynamics of a Forced Damped Pendulum - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 2";
+        var mkdocs_page_name = "Investigating the Dynamics of a Forced Damped Pendulum";
         var mkdocs_page_input_path = "1 Physics/1 Mechanics/Problem_2.md";
         var mkdocs_page_url = null;
       </script>
@@ -48,8 +48,26 @@
 <ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../Problem_1/">Problem 1</a>
 </li>
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Investigating the Dynamics of a Forced Damped Pendulum</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#1-theoretical-foundation">1. Theoretical Foundation</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#differential-equation">Differential Equation</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#small-angle-approximation">Small-Angle Approximation</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#approximate-solutions">Approximate Solutions</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#resonance-conditions">Resonance Conditions</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-analysis-of-dynamics">2. Analysis of Dynamics</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#3-practical-applications">3. Practical Applications</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#4-implementation">4. Implementation</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -163,7 +181,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">1 Mechanics</li>
-<li class="breadcrumb-item active">Problem 2</li>
+<li class="breadcrumb-item active">Investigating the Dynamics of a Forced Damped Pendulum</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,56 +189,83 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-2">Problem 2</h1>
-<h1 id="projectile-motion-analysis">Projectile Motion Analysis</h1>
+<h1 id="investigating-the-dynamics-of-a-forced-damped-pendulum">Investigating the Dynamics of a Forced Damped Pendulum</h1>
 <h2 id="1-theoretical-foundation">1. Theoretical Foundation</h2>
-<h3 id="derivation-of-equations">Derivation of Equations</h3>
-<p>We begin with Newton's Second Law:</p>
-<p><span class="arithmatex">\(F = ma\)</span></p>
-<p>Considering only gravity acting in the negative y-direction:</p>
-<p><span class="arithmatex">\(F_y = -mg\)</span></p>
-<p>This leads to the following accelerations:</p>
-<p><span class="arithmatex">\(a_x = 0\)</span>
-<span class="arithmatex">\(a_y = -g\)</span></p>
-<p>Integrating with respect to time, we obtain the velocities:</p>
-<p><span class="arithmatex">\(v_x = v_{0x}\)</span>
-<span class="arithmatex">\(v_y = v_{0y} - gt\)</span></p>
-<p>Integrating again, we get the position equations:</p>
-<p><span class="arithmatex">\(x = v_{0x}t\)</span>
-<span class="arithmatex">\(y = v_{0y}t - \frac{1}{2}gt^2\)</span></p>
+<h3 id="differential-equation">Differential Equation</h3>
+<p>The differential equation governing the motion of a forced damped pendulum is:</p>
+<p><span class="arithmatex">\(\frac{d^2\theta}{dt^2} + b\frac{d\theta}{dt} + \frac{g}{L}\sin(\theta) = A\cos(\omega t)\)</span></p>
 <p>Where:</p>
 <ul>
-<li><span class="arithmatex">\(v_{0x} = v_0 \cos(\theta)\)</span></li>
-<li><span class="arithmatex">\(v_{0y} = v_0 \sin(\theta)\)</span></li>
-<li><span class="arithmatex">\(v_0\)</span> is the initial velocity.</li>
-<li><span class="arithmatex">\(\theta\)</span> is the launch angle.</li>
+<li><span class="arithmatex">\(\theta\)</span> is the angular displacement.</li>
+<li><span class="arithmatex">\(b\)</span> is the damping coefficient.</li>
 <li><span class="arithmatex">\(g\)</span> is the acceleration due to gravity.</li>
-<li><span class="arithmatex">\(t\)</span> is time.</li>
+<li><span class="arithmatex">\(L\)</span> is the length of the pendulum.</li>
+<li><span class="arithmatex">\(A\)</span> is the driving amplitude.</li>
+<li><span class="arithmatex">\(\omega\)</span> is the driving frequency.</li>
 </ul>
-<h3 id="family-of-solutions">Family of Solutions</h3>
-<p>Varying <span class="arithmatex">\(v_0\)</span> and <span class="arithmatex">\(\theta\)</span> leads to different parabolic trajectories, forming a family of solutions. Changes in <span class="arithmatex">\(g\)</span> also affect the trajectory.</p>
-<h2 id="2-analysis-of-the-range">2. Analysis of the Range</h2>
-<h3 id="range-equation">Range Equation</h3>
-<p>The horizontal range (R) is given by:</p>
-<p><span class="arithmatex">\(R = \frac{v_0^2 \sin(2\theta)}{g}\)</span></p>
-<h3 id="parameter-dependence">Parameter Dependence</h3>
+<h3 id="small-angle-approximation">Small-Angle Approximation</h3>
+<p>For small angles, <span class="arithmatex">\(\sin(\theta) \approx \theta\)</span>. The equation simplifies to:</p>
+<p><span class="arithmatex">\(\frac{d^2\theta}{dt^2} + b\frac{d\theta}{dt} + \frac{g}{L}\theta = A\cos(\omega t)\)</span></p>
+<h3 id="approximate-solutions">Approximate Solutions</h3>
+<p>The general solution is the sum of the homogeneous (transient) and particular (steady-state) solutions.</p>
+<h3 id="resonance-conditions">Resonance Conditions</h3>
+<p>Resonance occurs when <span class="arithmatex">\(\omega \approx \sqrt{g/L}\)</span>, leading to maximum amplitude oscillations.</p>
+<h2 id="2-analysis-of-dynamics">2. Analysis of Dynamics</h2>
 <ul>
-<li><strong>Angle:</strong> Maximum range occurs at <span class="arithmatex">\(\theta = 45^\circ\)</span>. The range is symmetrical about this angle.</li>
-<li><strong>Initial Velocity:</strong> Range is proportional to <span class="arithmatex">\(v_0^2\)</span>.</li>
-<li><strong>Gravitational Acceleration:</strong> Range is inversely proportional to <span class="arithmatex">\(g\)</span>.</li>
+<li><strong>Damping Coefficient (b):</strong> Influences the rate of decay of oscillations.</li>
+<li><strong>Driving Amplitude (A):</strong> Affects the amplitude of oscillations and can lead to nonlinear behavior.</li>
+<li><strong>Driving Frequency (ω):</strong> Determines the system's response; resonance occurs when <span class="arithmatex">\(\omega\)</span> is close to the natural frequency.</li>
+<li><strong>Transition to Chaos:</strong> Can be observed through phase portraits, Poincaré sections, and bifurcation diagrams.</li>
 </ul>
 <h2 id="3-practical-applications">3. Practical Applications</h2>
 <ul>
-<li><strong>Uneven Terrain:</strong> Adjust the y-coordinate equation to account for terrain profile.</li>
-<li><strong>Air Resistance:</strong> Introduce a drag force term into the differential equations.</li>
-<li><strong>Wind:</strong> Add a wind velocity component to <span class="arithmatex">\(v_x\)</span>.</li>
-<li><strong>Sports:</strong> Modeling ball trajectories in various sports.</li>
-<li><strong>Engineering:</strong> Designing artillery projectiles and rocket trajectories.</li>
-<li><strong>Astrophysics:</strong> Modeling comet and asteroid trajectories.</li>
+<li>Energy harvesting devices</li>
+<li>Suspension bridges</li>
+<li>Oscillating circuits</li>
+<li>Metronomes</li>
+<li>Various mechanical systems</li>
 </ul>
 <h2 id="4-implementation">4. Implementation</h2>
-<p><img alt="image" src="https://github.com/user-attachments/assets/1e6317db-e855-4a86-8652-11b26a2075d3"/></p>
-<p><img alt="image" src="https://github.com/user-attachments/assets/f6415ad7-45ba-44d6-8fdd-65aba6cc571c"/></p>
+<p>import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import solve_ivp</p>
+<p>def pendulum_equation(t, y, b, g, L, A, omega):
+    theta, theta_dot = y
+    dtheta_dt = theta_dot
+    dtheta_dot_dt = -b * theta_dot - (g / L) * np.sin(theta) + A * np.cos(omega * t)
+    return [dtheta_dt, dtheta_dot_dt]</p>
+<p>def simulate_pendulum(b, g, L, A, omega, t_span, y0):
+    sol = solve_ivp(pendulum_equation, t_span, y0, args=(b, g, L, A, omega), dense_output=True)
+    return sol.t, sol.y[0], sol.y[1]</p>
+<h1 id="parameters">Parameters</h1>
+<p>b = 0.5  # Damping coefficient
+g = 9.81  # Gravity
+L = 1.0  # Length
+A = 1.0  # Driving amplitude
+omega = 1.5  # Driving frequency
+t_span = (0, 50)
+y0 = [0.1, 0.0]  # Initial conditions</p>
+<h1 id="simulation">Simulation</h1>
+<p>import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import solve_ivp</p>
+<p>def pendulum_equation(t, y, b, g, L, A, omega):
+    theta, theta_dot = y
+    dtheta_dt = theta_dot
+    dtheta_dot_dt = -b * theta_dot - (g / L) * np.sin(theta) + A * np.cos(omega * t)
+    return [dtheta_dt, dtheta_dot_dt]</p>
+<p>def simulate_pendulum(b, g, L, A, omega, t_span, y0):
+    sol = solve_ivp(pendulum_equation, t_span, y0, args=(b, g, L, A, omega), dense_output=True)
+    return sol.t, sol.y[0], sol.y[1]</p>
+<h1 id="parameters_1">Parameters</h1>
+<p>b = 0.5  # Damping coefficient
+g = 9.81  # Gravity
+L = 1.0  # Length
+A = 1.0  # Driving amplitude
+omega = 1.5  # Driving frequency
+t_span = (0, 50)
+y0 = [0.1, 0.0]  # Initial conditions</p>
+<h1 id="simulation_1">Simulation</h1>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
