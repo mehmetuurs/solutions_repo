@@ -66,5 +66,10 @@ $R = \frac{v_0^2 \sin(2\theta)}{g}$
 
 ## 4. Implementation
 
+![image](https://github.com/user-attachments/assets/1e6317db-e855-4a86-8652-11b26a2075d3)
+
+![image](https://github.com/user-attachments/assets/f6415ad7-45ba-44d6-8fdd-65aba6cc571c)
+
+
 
 
