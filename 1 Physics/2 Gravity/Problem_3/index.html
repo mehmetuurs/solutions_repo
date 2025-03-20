@@ -70,8 +70,6 @@
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#orbital-insertion-reentry-and-escape-connecting-trajectories-to-space-missions">Orbital Insertion, Reentry, and Escape: Connecting Trajectories to Space Missions</a>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#computational-tool-simulating-payload-motion">Computational Tool: Simulating Payload Motion</a>
-</li>
 </ul>
 </li>
 </ul>
@@ -311,49 +309,7 @@ m\mathbf{a} = -\frac{GMm}{r^2} \mathbf{\hat{r}}
 </ul>
 </li>
 </ul>
-<h3 id="computational-tool-simulating-payload-motion">Computational Tool: Simulating Payload Motion</h3>
-<p>The following Python script implements the numerical simulation of the payload's trajectory using the Euler method. It visualizes the trajectory and includes Earth for reference.</p>
-<p>import numpy as np
-import matplotlib.pyplot as plt</p>
-<h1 id="constants">Constants</h1>
-<p>G = 6.67430e-11  # Gravitational constant (m^3 kg^-1 s^-2)
-M = 5.972e24     # Mass of Earth (kg)
-R_earth = 6.371e6 # Radius of Earth (m)</p>
-<h1 id="initial-conditions_1">Initial conditions</h1>
-<p>r0 = np.array([R_earth + 500e3, 0.0])  # Initial position (500 km altitude)
-v0 = np.array([0.0, 7.5e3])           # Initial velocity</p>
-<h1 id="time-parameters">Time parameters</h1>
-<p>dt = 10.0           # Time step (s)
-t_total = 8000.0    # Total simulation time (s)
-t = 0.0</p>
-<h1 id="lists-to-store-trajectory">Lists to store trajectory</h1>
-<p>trajectory_r = [r0]
-trajectory_v = [v0]</p>
-<h1 id="simulation-loop">Simulation loop</h1>
-<p>while t &lt; t_total:
-    r = trajectory_r[-1]
-    v = trajectory_v[-1]
-    r_mag = np.linalg.norm(r)</p>
-<pre><code>a = -G * M * r / (r_mag**3)  # Acceleration due to gravity
-v_new = v + a * dt
-r_new = r + v_new * dt
-
-trajectory_r.append(r_new)
-trajectory_v.append(v_new)
-t += dt
-</code></pre>
-<h1 id="convert-to-numpy-arrays-for-plotting">Convert to numpy arrays for plotting</h1>
-<p>trajectory_r = np.array(trajectory_r)</p>
-<h1 id="plotting">Plotting</h1>
-<p>plt.figure(figsize=(8, 8))
-plt.plot(trajectory_r[:, 0], trajectory_r[:, 1])
-plt.gca().add_patch(plt.Circle((0, 0), R_earth, color='blue'))
-plt.axis('equal')
-plt.xlabel("X (m)")
-plt.ylabel("Y (m)")
-plt.title("Payload Trajectory Near Earth")
-plt.grid(True)
-plt.show()S</p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/20dc3f3f-a764-4e3f-bda7-de1f9a384c18"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
