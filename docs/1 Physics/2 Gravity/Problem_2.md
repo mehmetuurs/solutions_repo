@@ -126,3 +126,15 @@ $$
 - $r$ is the orbital radius (approximately the body's radius).
 - $v_1$ is the first cosmic velocity.
 
+![image](https://github.com/user-attachments/assets/4858b1f2-83eb-4549-85b6-568f58dc9277)
+
+Earth:
+  First cosmic velocity: 7909.68 m/s
+  Second cosmic velocity: 11185.98 m/s
+Mars:
+  First cosmic velocity: 3546.94 m/s
+  Second cosmic velocity: 5016.13 m/s
+Jupiter:
+  First cosmic velocity: 42567.51 m/s
+  Second cosmic velocity: 60199.54 m/s
+
