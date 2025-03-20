@@ -131,9 +131,11 @@ $$
 Earth:
   First cosmic velocity: 7909.68 m/s
   Second cosmic velocity: 11185.98 m/s
+  
 Mars:
   First cosmic velocity: 3546.94 m/s
   Second cosmic velocity: 5016.13 m/s
+  
 Jupiter:
   First cosmic velocity: 42567.51 m/s
   Second cosmic velocity: 60199.54 m/s
