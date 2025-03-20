@@ -79,47 +79,6 @@ We will:
 1. **Plot the relationship between $T^2$ and $r^3$** to confirm the law.
 2. **Simulate a circular orbit** to visualize planetary motion.
 
----
-
-## **Python Code for Simulations**
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy.constants import G
-
-# Define constants
-M = 5.972e24  # Mass of Earth (kg)
-R = np.linspace(6.7e6, 4e8, 100)  # Orbital radius from low Earth orbit to Moon (m)
-
-# Compute Orbital Period using Kepler's Third Law
-T = np.sqrt((4 * np.pi**2 * R**3) / (G * M))
-
-# Plot T^2 vs. R^3 to verify Kepler's Third Law
-plt.figure(figsize=(8, 6))
-plt.plot(R**3, T**2, label="$T^2$ vs. $r^3$", color='b')
-plt.xlabel("$r^3$ (m³)")
-plt.ylabel("$T^2$ (s²)")
-plt.title("Verification of Kepler's Third Law")
-plt.legend()
-plt.grid()
-plt.show()
-
-# Circular Orbit Simulation
-fig, ax = plt.subplots(figsize=(6,6))
-ax.set_xlim(-R[-1], R[-1])
-ax.set_ylim(-R[-1], R[-1])
-ax.set_xlabel("X (m)")
-ax.set_ylabel("Y (m)")
-ax.set_title("Circular Orbit Simulation")
-
-# Generate Circular Orbit
-theta = np.linspace(0, 2*np.pi, 300)
-x = R[-1] * np.cos(theta)
-y = R[-1] * np.sin(theta)
-ax.plot(x, y, label="Orbit", color='r')
-ax.scatter(0, 0, color='black', label="Central Body")
-ax.legend()
-ax.grid()
-plt.show()
 
 ![image](https://github.com/user-attachments/assets/eb13d284-e24f-49dc-99cd-112cfbb51b0f)
 ![image](https://github.com/user-attachments/assets/65c421ab-62e2-4c28-b93c-11c3f93cc252)
