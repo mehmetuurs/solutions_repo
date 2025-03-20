@@ -78,8 +78,6 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#step-3-computational-model-simulations">Step 3: Computational Model &amp; Simulations</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#python-code-for-simulations">Python Code for Simulations</a>
-</li>
 </ul>
 </li>
 </ul>
@@ -245,41 +243,6 @@ At the same time, the object moves in a circular path, meaning the centripetal f
 We will:
 1. <strong>Plot the relationship between <span class="arithmatex">\(T^2\)</span> and <span class="arithmatex">\(r^3\)</span></strong> to confirm the law.
 2. <strong>Simulate a circular orbit</strong> to visualize planetary motion.</p>
-<hr/>
-<h2 id="python-code-for-simulations"><strong>Python Code for Simulations</strong></h2>
-<p>import numpy as np
-import matplotlib.pyplot as plt
-from scipy.constants import G</p>
-<h1 id="define-constants">Define constants</h1>
-<p>M = 5.972e24  # Mass of Earth (kg)
-R = np.linspace(6.7e6, 4e8, 100)  # Orbital radius from low Earth orbit to Moon (m)</p>
-<h1 id="compute-orbital-period-using-keplers-third-law">Compute Orbital Period using Kepler's Third Law</h1>
-<p>T = np.sqrt((4 * np.pi<strong>2 * R</strong>3) / (G * M))</p>
-<h1 id="plot-t2-vs-r3-to-verify-keplers-third-law">Plot T^2 vs. R^3 to verify Kepler's Third Law</h1>
-<p>plt.figure(figsize=(8, 6))
-plt.plot(R<strong>3, T</strong>2, label="<span class="arithmatex">\(T^2\)</span> vs. <span class="arithmatex">\(r^3\)</span>", color='b')
-plt.xlabel("<span class="arithmatex">\(r^3\)</span> (m³)")
-plt.ylabel("<span class="arithmatex">\(T^2\)</span> (s²)")
-plt.title("Verification of Kepler's Third Law")
-plt.legend()
-plt.grid()
-plt.show()</p>
-<h1 id="circular-orbit-simulation">Circular Orbit Simulation</h1>
-<p>fig, ax = plt.subplots(figsize=(6,6))
-ax.set_xlim(-R[-1], R[-1])
-ax.set_ylim(-R[-1], R[-1])
-ax.set_xlabel("X (m)")
-ax.set_ylabel("Y (m)")
-ax.set_title("Circular Orbit Simulation")</p>
-<h1 id="generate-circular-orbit">Generate Circular Orbit</h1>
-<p>theta = np.linspace(0, 2*np.pi, 300)
-x = R[-1] * np.cos(theta)
-y = R[-1] * np.sin(theta)
-ax.plot(x, y, label="Orbit", color='r')
-ax.scatter(0, 0, color='black', label="Central Body")
-ax.legend()
-ax.grid()
-plt.show()</p>
 <p><img alt="image" src="https://github.com/user-attachments/assets/eb13d284-e24f-49dc-99cd-112cfbb51b0f"/>
 <img alt="image" src="https://github.com/user-attachments/assets/65c421ab-62e2-4c28-b93c-11c3f93cc252"/></p>
 </div>
