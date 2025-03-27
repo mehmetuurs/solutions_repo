@@ -139,4 +139,3 @@ Mars:
 Jupiter:
   First cosmic velocity: 42567.51 m/s
   Second cosmic velocity: 60199.54 m/s
-
