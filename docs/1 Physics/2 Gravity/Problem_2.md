@@ -12,25 +12,33 @@
 
 ### **Definitions: 
 
-# First Cosmic Velocity (Orbital Velocity, $v_1$)
-- This is the minimum velocity required for an object to enter a stable circular orbit around a celestial body, just above its surface (neglecting atmospheric drag).
-  - It represents the balance between the gravitational force pulling the object towards the body and the centrifugal force pushing it outward.
-  - Physically, it's the speed at which the object's trajectory continuously curves to match the curvature of the celestial body.
+# First Cosmic Velocity (Orbital Velocity, v1)
 
----
+This is the minimum velocity required for an object to enter a stable circular orbit around a celestial body, just above its surface (neglecting atmospheric drag).
 
-- **Second Cosmic Velocity (Escape Velocity, $v_2$):**
-  - This is the minimum velocity needed for an object to completely escape the gravitational pull of a celestial body, moving infinitely far away with zero kinetic energy.
-  - It's the velocity at which the object's kinetic energy equals the magnitude of its gravitational potential energy.
-  - Physically, it means the object has enough energy to overcome the gravitational potential well of the body.
+It represents the balance between the gravitational force pulling the object towards the body and the centrifugal force pushing it outward.
 
-- ## Second Cosmic Velocity (Escape Velocity, $v_2$)
-- This is the minimum velocity needed for an object to completely escape the gravitational pull of a celestial body, moving infinitely far away with zero kinetic energy.
-  - It's the velocity at which the object's kinetic energy equals the magnitude of its gravitational potential energy.
-  - Physically, it means the object has enough energy to overcome the gravitational potential well of the body.
+Physically, it's the speed at which the object's trajectory continuously curves to match the curvature of the celestial body.
 
----
 
+## Second Cosmic Velocity (Escape Velocity, v2)
+
+This is the minimum velocity needed for an object to completely escape the gravitational pull of a celestial body, moving infinitely far away with zero kinetic energy.
+
+It's the velocity at which the object's kinetic energy equals the magnitude of its gravitational potential energy.
+
+Physically, it means the object has enough energy to overcome the gravitational potential well of the body.
+
+
+## Third Cosmic Velocity (v3)
+
+This is the minimum velocity required for an object to escape the gravitational influence of a star system, such as our Solar System, starting from a planet's surface.
+
+It involves escaping the planet's gravity, then the star's gravity, and the galaxy's gravity.
+
+Since the velocity is relative to the Sun, and the Earth is already orbiting the Sun, we need to add the velocity of the Earth in orbit around the Sun to the velocity required to escape the solar system.
+
+Physically, it's the speed required to break free from the combined gravitational effects of the entire star system.
 
 ### **Mathematical Derivations: The Equations Behind the Velocities**
 
