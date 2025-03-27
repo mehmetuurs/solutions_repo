@@ -106,6 +106,7 @@ $$
 
 ### **Parameters Affecting Velocities: What Influences the Numbers?**
 
+
 ## Mass of the Celestial Body (M):
 
 A more massive body exerts a stronger gravitational pull, requiring higher velocities to orbit or escape.
@@ -137,7 +138,6 @@ It ensures that the spacecraft can escape the planet's gravitational pull and tr
 The third cosmic velocity (or higher) is necessary for future missions that aim to leave our Solar System and explore interstellar space.
 
 This is a large hurdle, and extremely hard to achieve with current technology.
-
 
 ### Where:
 
