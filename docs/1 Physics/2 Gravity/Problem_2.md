@@ -106,29 +106,38 @@ $$
 
 ### **Parameters Affecting Velocities: What Influences the Numbers?**
 
-- **Mass of the Celestial Body ($M$):**
-  - A more massive body exerts a stronger gravitational pull, requiring higher velocities to orbit or escape.
-  - This is evident in the equations, where $M$ is directly proportional to $v_1$ and $v_2$.
+## Mass of the Celestial Body (M):
 
-- **Radius ($r$):**
-  - A smaller radius (for the same mass) means a stronger gravitational field at the surface, again requiring higher velocities.
-  - This is inversely proportional to the square root of $r$ in the equations.
+A more massive body exerts a stronger gravitational pull, requiring higher velocities to orbit or escape.
 
+This is evident in the equations, where $M$ is directly proportional to $v_1$ and $v_2$.
 
+## Radius (r):
 
-### **Importance in Space Exploration: Practical Applications**
+A smaller radius (for the same mass) means a stronger gravitational field at the surface, again requiring higher velocities.
 
-- **Launching Satellites:**
-  - The first cosmic velocity is essential for placing satellites in stable orbits around Earth or other planets.
-  - It determines the initial velocity needed to achieve orbit.
+This is inversely proportional to the square root of $r$ in the equations.
 
-- **Interplanetary Missions:**
-  - The second cosmic velocity is crucial for sending probes and spacecraft to other planets.
-  - It ensures that the spacecraft can escape the planet's gravitational pull and travel to its destination.
+# Importance in Space Exploration: Practical Applications
 
-- **Interstellar Travel:**
-  - The third cosmic velocity (or higher) is necessary for future missions that aim to leave our Solar System and explore interstellar space.
-  - This is a large hurdle, and extremely hard to achieve with current technology.
+## Launching Satellites:
+
+The first cosmic velocity is essential for placing satellites in stable orbits around Earth or other planets.
+
+It determines the initial velocity needed to achieve orbit.
+
+## Interplanetary Missions:
+
+The second cosmic velocity is crucial for sending probes and spacecraft to other planets.
+
+It ensures that the spacecraft can escape the planet's gravitational pull and travel to its destination.
+
+## Interstellar Travel:
+
+The third cosmic velocity (or higher) is necessary for future missions that aim to leave our Solar System and explore interstellar space.
+
+This is a large hurdle, and extremely hard to achieve with current technology.
+
 
 ### Where:
 
