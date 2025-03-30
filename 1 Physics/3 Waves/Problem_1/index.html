@@ -80,9 +80,13 @@
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#4-superposition-of-waves">4. Superposition of Waves</a>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#5-python-simulation">5. Python Simulation</a>
+<li class="toctree-l4"><a class="reference internal" href="#5-analyze-interference-patterns">5. Analyze Interference Patterns</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#6-visualization">6. Visualization</a>
 </li>
 </ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#results">Results</a>
 </li>
 </ul>
 </li>
@@ -226,40 +230,23 @@
 <h3 id="4-superposition-of-waves">4. Superposition of Waves</h3>
 <p>The total displacement is:</p>
 <div class="arithmatex">\[ \eta_{\text{total}}(x, y, t) = \sum_{i=1}^{3} A \cos(k r_i - \omega t) \]</div>
-<h3 id="5-python-simulation">5. Python Simulation</h3>
-<p>Below is a Python script to simulate and visualize the interference pattern at <span class="arithmatex">\(t = 0\)</span>:</p>
-<p>```python
-import numpy as np
-import matplotlib.pyplot as plt</p>
-<h1 id="parameters">Parameters</h1>
-<p>A = 1.0      # Amplitude
-k = 2 * np.pi  # Wave number (lambda = 1)
-omega = 2 * np.pi  # Angular frequency (f = 1)
-t = 0.0      # Time snapshot
-phi = 0.0    # Phase</p>
-<h1 id="source-positions-equilateral-triangle-vertices">Source positions (equilateral triangle vertices)</h1>
-<p>sources = [(0, 1), (np.sqrt(3)/2, -0.5), (-np.sqrt(3)/2, -0.5)]</p>
-<h1 id="grid-for-simulation">Grid for simulation</h1>
-<p>x = np.linspace(-2, 2, 200)
-y = np.linspace(-2, 2, 200)
-X, Y = np.meshgrid(x, y)</p>
-<h1 id="calculate-total-displacement">Calculate total displacement</h1>
-<p>eta_total = np.zeros_like(X)
-for (xs, ys) in sources:
-    r = np.sqrt((X - xs)<strong>2 + (Y - ys)</strong>2)
-    eta_total += A * np.cos(k * r - omega * t + phi)</p>
-<h1 id="plotting">Plotting</h1>
-<p>plt.figure(figsize=(8, 8))
-plt.contourf(X, Y, eta_total, levels=20, cmap='RdBu')
-plt.colorbar(label='Displacement <span class="arithmatex">\(\eta_{\text{total}}\)</span>')
-plt.scatter([s[0] for s in sources], [s[1] for s in sources], 
-            c='black', label='Sources')
-plt.title('Interference Pattern for Equilateral Triangle Sources')
-plt.xlabel('<span class="arithmatex">\(x\)</span>')
-plt.ylabel('<span class="arithmatex">\(y\)</span>')
-plt.legend()
-plt.grid(True)
-plt.show()</p>
+<h3 id="5-analyze-interference-patterns">5. Analyze Interference Patterns</h3>
+<ul>
+<li><strong>Constructive Interference</strong>: Occurs where waves from all sources are in phase (e.g., crests align), resulting in larger amplitudes (bright red/blue regions in the plot).</li>
+<li><strong>Destructive Interference</strong>: Occurs where waves are out of phase (e.g., crest meets trough), resulting in near-zero displacement (white regions).</li>
+</ul>
+<p>For the equilateral triangle:
+- Symmetry in the pattern reflects the triangle's geometry.
+- High-amplitude regions form near the center and along symmetric axes.
+- Cancellation occurs in regions where waves from different sources arrive with opposite phases.</p>
+<h3 id="6-visualization">6. Visualization</h3>
+<p>The plot above shows the water surface displacement at <span class="arithmatex">\(t = 0\)</span>. Red and blue indicate positive and negative displacements (crests and troughs), while white indicates destructive interference.</p>
+<h2 id="results">Results</h2>
+<p>The interference pattern for three sources at the vertices of an equilateral triangle exhibits:
+- A central region of constructive interference due to overlapping crests.
+- Radiating bands of alternating constructive and destructive interference, forming a triangular symmetry.
+- The pattern evolves over time with <span class="arithmatex">\(\omega t\)</span>, but the snapshot at <span class="arithmatex">\(t = 0\)</span> captures the initial state.</p>
+<p>This simulation illustrates how wave superposition depends on source positioning and phase coherence, offering insights into wave physics in a tangible, visual format.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
