@@ -52,6 +52,10 @@ The total displacement is:
 $$ \eta_{\text{total}}(x, y, t) = \sum_{i=1}^{3} A \cos(k r_i - \omega t) $$
 
 
+![image](https://github.com/user-attachments/assets/58c66c8d-0ee5-4d22-8492-bc3a0563b16d)
+
+
+
 ### 5. Analyze Interference Patterns
 - **Constructive Interference**: Occurs where waves from all sources are in phase (e.g., crests align), resulting in larger amplitudes (bright red/blue regions in the plot).
 - **Destructive Interference**: Occurs where waves are out of phase (e.g., crest meets trough), resulting in near-zero displacement (white regions).
