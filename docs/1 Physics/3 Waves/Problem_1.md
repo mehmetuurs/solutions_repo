@@ -2,7 +2,6 @@
 
 ## Motivation
 Interference occurs when waves from different sources overlap, creating new patterns. On a water surface, this can be observed when ripples from multiple points meet, forming distinctive interference patterns. These patterns demonstrate how waves combine, either reinforcing (constructive interference) or canceling each other (destructive interference). Studying these patterns provides a visual and intuitive way to understand wave behavior and explore concepts like phase relationships and multi-source interactions, with applications in physics and engineering.
-
 ## Problem Statement
 We aim to analyze the interference patterns formed by the superposition of circular waves emitted from point sources located at the vertices of a regular polygon. For this example, we choose an **equilateral triangle** as the regular polygon.
 
@@ -23,7 +22,6 @@ For multiple sources, the total displacement is the sum of individual waves (sup
 $$ \eta_{\text{total}}(x, y, t) = \sum_{i=1}^{N} \eta_i(x, y, t) $$
 
 where $N$ is the number of sources (vertices of the polygon).
-
 ## Steps and Solution
 
 ### 1. Select a Regular Polygon
@@ -53,43 +51,23 @@ The total displacement is:
 
 $$ \eta_{\text{total}}(x, y, t) = \sum_{i=1}^{3} A \cos(k r_i - \omega t) $$
 
-### 5. Python Simulation
-Below is a Python script to simulate and visualize the interference pattern at $t = 0$:
 
-```python
-import numpy as np
-import matplotlib.pyplot as plt
+### 5. Analyze Interference Patterns
+- **Constructive Interference**: Occurs where waves from all sources are in phase (e.g., crests align), resulting in larger amplitudes (bright red/blue regions in the plot).
+- **Destructive Interference**: Occurs where waves are out of phase (e.g., crest meets trough), resulting in near-zero displacement (white regions).
 
-# Parameters
-A = 1.0      # Amplitude
-k = 2 * np.pi  # Wave number (lambda = 1)
-omega = 2 * np.pi  # Angular frequency (f = 1)
-t = 0.0      # Time snapshot
-phi = 0.0    # Phase
+For the equilateral triangle:
+- Symmetry in the pattern reflects the triangle's geometry.
+- High-amplitude regions form near the center and along symmetric axes.
+- Cancellation occurs in regions where waves from different sources arrive with opposite phases.
 
-# Source positions (equilateral triangle vertices)
-sources = [(0, 1), (np.sqrt(3)/2, -0.5), (-np.sqrt(3)/2, -0.5)]
+### 6. Visualization
+The plot above shows the water surface displacement at $t = 0$. Red and blue indicate positive and negative displacements (crests and troughs), while white indicates destructive interference.
 
-# Grid for simulation
-x = np.linspace(-2, 2, 200)
-y = np.linspace(-2, 2, 200)
-X, Y = np.meshgrid(x, y)
+## Results
+The interference pattern for three sources at the vertices of an equilateral triangle exhibits:
+- A central region of constructive interference due to overlapping crests.
+- Radiating bands of alternating constructive and destructive interference, forming a triangular symmetry.
+- The pattern evolves over time with $\omega t$, but the snapshot at $t = 0$ captures the initial state.
 
-# Calculate total displacement
-eta_total = np.zeros_like(X)
-for (xs, ys) in sources:
-    r = np.sqrt((X - xs)**2 + (Y - ys)**2)
-    eta_total += A * np.cos(k * r - omega * t + phi)
-
-# Plotting
-plt.figure(figsize=(8, 8))
-plt.contourf(X, Y, eta_total, levels=20, cmap='RdBu')
-plt.colorbar(label='Displacement $\eta_{\text{total}}$')
-plt.scatter([s[0] for s in sources], [s[1] for s in sources], 
-            c='black', label='Sources')
-plt.title('Interference Pattern for Equilateral Triangle Sources')
-plt.xlabel('$x$')
-plt.ylabel('$y$')
-plt.legend()
-plt.grid(True)
-plt.show()
+This simulation illustrates how wave superposition depends on source positioning and phase coherence, offering insights into wave physics in a tangible, visual format.
