@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Interference Patterns on a Water Surface - Physics and Mathematics</title>
+<title>🌌 Gravitational Dynamics: Analyzing Kepler’s Third Law 🌌 - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Interference Patterns on a Water Surface";
+        var mkdocs_page_name = "\ud83c\udf0c Gravitational Dynamics: Analyzing Kepler\u2019s Third Law \ud83c\udf0c";
         var mkdocs_page_input_path = "1 Physics/3 Waves/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -64,29 +64,27 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">3 Waves</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Interference Patterns on a Water Surface</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">🌌 Gravitational Dynamics: Analyzing Kepler’s Third Law 🌌</a>
 <ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a>
+<li class="toctree-l3"><a class="reference internal" href="#objective">🎯 Objective</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#problem-statement">Problem Statement</a>
+<li class="toctree-l3"><a class="reference internal" href="#derivation-establishing-keplers-third-law">🚀 Derivation: Establishing Kepler’s Third Law</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#steps-and-solution">Steps and Solution</a>
+<li class="toctree-l3"><a class="reference internal" href="#astronomical-significance">🌍 Astronomical Significance</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#computational-analysis">📊 Computational Analysis</a>
 <ul>
-<li class="toctree-l4"><a class="reference internal" href="#1-select-a-regular-polygon">1. Select a Regular Polygon</a>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-orbital-data">Step 1: Orbital Data</a>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#2-position-the-sources">2. Position the Sources</a>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-circular-orbit-visualization">Step 2: Circular Orbit Visualization 🎬</a>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#3-wave-equations">3. Wave Equations</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#4-superposition-of-waves">4. Superposition of Waves</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#5-analyze-interference-patterns">5. Analyze Interference Patterns</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#6-visualization">6. Visualization</a>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-t2-vs-r3-verification">Step 3: \(T^2\) vs \(r^3\) Verification</a>
 </li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#results">Results</a>
+<li class="toctree-l3"><a class="reference internal" href="#extension-to-elliptical-orbits">🌠 Extension to Elliptical Orbits</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#summary">🎨 Summary</a>
 </li>
 </ul>
 </li>
@@ -185,7 +183,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">3 Waves</li>
-<li class="breadcrumb-item active">Interference Patterns on a Water Surface</li>
+<li class="breadcrumb-item active">🌌 Gravitational Dynamics: Analyzing Kepler’s Third Law 🌌</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -193,61 +191,140 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="interference-patterns-on-a-water-surface">Interference Patterns on a Water Surface</h1>
-<h2 id="motivation">Motivation</h2>
-<p>Interference occurs when waves from different sources overlap, creating new patterns. On a water surface, this can be observed when ripples from multiple points meet, forming distinctive interference patterns. These patterns demonstrate how waves combine, either reinforcing (constructive interference) or canceling each other (destructive interference). Studying these patterns provides a visual and intuitive way to understand wave behavior and explore concepts like phase relationships and multi-source interactions, with applications in physics and engineering.</p>
-<h2 id="problem-statement">Problem Statement</h2>
-<p>We aim to analyze the interference patterns formed by the superposition of circular waves emitted from point sources located at the vertices of a regular polygon. For this example, we choose an <strong>equilateral triangle</strong> as the regular polygon.</p>
-<p>A single circular wave from a point source at position <span class="arithmatex">\((x_s, y_s)\)</span> is described by the equation:</p>
-<div class="arithmatex">\[ \eta(x, y, t) = A \cos(k r - \omega t + \phi) \]</div>
-<p>where:
-- <span class="arithmatex">\(\eta(x, y, t)\)</span> is the water surface displacement at point <span class="arithmatex">\((x, y)\)</span> and time <span class="arithmatex">\(t\)</span>,
-- <span class="arithmatex">\(A\)</span> is the amplitude,
-- <span class="arithmatex">\(k = \frac{2\pi}{\lambda}\)</span> is the wave number, with <span class="arithmatex">\(\lambda\)</span> as the wavelength,
-- <span class="arithmatex">\(r = \sqrt{(x - x_s)^2 + (y - y_s)^2}\)</span> is the distance from the source,
-- <span class="arithmatex">\(\omega = 2\pi f\)</span> is the angular frequency, with <span class="arithmatex">\(f\)</span> as the frequency,
-- <span class="arithmatex">\(\phi\)</span> is the initial phase.</p>
-<p>For multiple sources, the total displacement is the sum of individual waves (superposition):</p>
-<div class="arithmatex">\[ \eta_{\text{total}}(x, y, t) = \sum_{i=1}^{N} \eta_i(x, y, t) \]</div>
-<p>where <span class="arithmatex">\(N\)</span> is the number of sources (vertices of the polygon).</p>
-<h2 id="steps-and-solution">Steps and Solution</h2>
-<h3 id="1-select-a-regular-polygon">1. Select a Regular Polygon</h3>
-<p>We choose an <strong>equilateral triangle</strong> with vertices at:
-- <span class="arithmatex">\((x_1, y_1) = (0, 1)\)</span>,
-- <span class="arithmatex">\((x_2, y_2) = \left(\frac{\sqrt{3}}{2}, -\frac{1}{2}\right)\)</span>,
-- <span class="arithmatex">\((x_3, y_3) = \left(-\frac{\sqrt{3}}{2}, -\frac{1}{2}\right)\)</span>.</p>
-<p>These coordinates place the triangle's centroid at the origin <span class="arithmatex">\((0, 0)\)</span> with a side length of <span class="arithmatex">\(\sqrt{3}\)</span>.</p>
-<h3 id="2-position-the-sources">2. Position the Sources</h3>
-<p>The wave sources are placed at the triangle's vertices as listed above.</p>
-<h3 id="3-wave-equations">3. Wave Equations</h3>
-<p>For each source <span class="arithmatex">\(i\)</span> at <span class="arithmatex">\((x_i, y_i)\)</span>, the wave equation is:</p>
-<div class="arithmatex">\[ \eta_i(x, y, t) = A \cos(k r_i - \omega t + \phi) \]</div>
-<p>where <span class="arithmatex">\(r_i = \sqrt{(x - x_i)^2 + (y - y_i)^2}\)</span>. We assume:
-- <span class="arithmatex">\(A = 1\)</span> (same amplitude for all sources),
-- <span class="arithmatex">\(\lambda = 1\)</span> (wavelength), so <span class="arithmatex">\(k = \frac{2\pi}{1} = 2\pi\)</span>,
-- <span class="arithmatex">\(f = 1\)</span> (frequency), so <span class="arithmatex">\(\omega = 2\pi \cdot 1 = 2\pi\)</span>,
-- <span class="arithmatex">\(\phi = 0\)</span> (coherent sources with no phase difference).</p>
-<h3 id="4-superposition-of-waves">4. Superposition of Waves</h3>
-<p>The total displacement is:</p>
-<div class="arithmatex">\[ \eta_{\text{total}}(x, y, t) = \sum_{i=1}^{3} A \cos(k r_i - \omega t) \]</div>
-<p><img alt="image" src="https://github.com/user-attachments/assets/58c66c8d-0ee5-4d22-8492-bc3a0563b16d"/></p>
-<h3 id="5-analyze-interference-patterns">5. Analyze Interference Patterns</h3>
+<h1 id="gravitational-dynamics-analyzing-keplers-third-law">🌌 Gravitational Dynamics: Analyzing Kepler’s Third Law 🌌</h1>
+<hr/>
+<h2 id="objective">🎯 Objective</h2>
+<p>This notebook investigates the relationship between orbital period and radius through Kepler’s Third Law for circular orbits. It includes a derivation, computational simulation, and analysis of real-world astronomical data. </p>
+<hr/>
+<h2 id="derivation-establishing-keplers-third-law">🚀 Derivation: Establishing Kepler’s Third Law</h2>
+<p>For a body in a circular orbit, the gravitational force balances the centripetal force required for circular motion:</p>
 <ul>
-<li><strong>Constructive Interference</strong>: Occurs where waves from all sources are in phase (e.g., crests align), resulting in larger amplitudes (bright red/blue regions in the plot).</li>
-<li><strong>Destructive Interference</strong>: Occurs where waves are out of phase (e.g., crest meets trough), resulting in near-zero displacement (white regions).</li>
+<li><strong>Gravitational Force</strong>: <span class="arithmatex">\(F_g = \frac{G M m}{r^2}\)</span></li>
+<li><strong>Centripetal Force</strong>: <span class="arithmatex">\(F_c = \frac{m v^2}{r}\)</span></li>
 </ul>
-<p>For the equilateral triangle:
-- Symmetry in the pattern reflects the triangle's geometry.
-- High-amplitude regions form near the center and along symmetric axes.
-- Cancellation occurs in regions where waves from different sources arrive with opposite phases.</p>
-<h3 id="6-visualization">6. Visualization</h3>
-<p>The plot above shows the water surface displacement at <span class="arithmatex">\(t = 0\)</span>. Red and blue indicate positive and negative displacements (crests and troughs), while white indicates destructive interference.</p>
-<h2 id="results">Results</h2>
-<p>The interference pattern for three sources at the vertices of an equilateral triangle exhibits:
-- A central region of constructive interference due to overlapping crests.
-- Radiating bands of alternating constructive and destructive interference, forming a triangular symmetry.
-- The pattern evolves over time with <span class="arithmatex">\(\omega t\)</span>, but the snapshot at <span class="arithmatex">\(t = 0\)</span> captures the initial state.</p>
-<p>This simulation illustrates how wave superposition depends on source positioning and phase coherence, offering insights into wave physics in a tangible, visual format.</p>
+<p>Equating these forces:<br/>
+$$ \frac{G M m}{r^2} = \frac{m v^2}{r} $$<br/>
+Cancel <span class="arithmatex">\(m\)</span> (mass of the orbiting body) and simplify:<br/>
+$$ v^2 = \frac{G M}{r} $$</p>
+<p>The orbital velocity is <span class="arithmatex">\(v = \frac{2\pi r}{T}\)</span>, where <span class="arithmatex">\(T\)</span> is the orbital period. Substituting:<br/>
+$$ \left(\frac{2\pi r}{T}\right)^2 = \frac{G M}{r} $$<br/>
+$$ \frac{4\pi^2 r^2}{T^2} = \frac{G M}{r} $$<br/>
+Rearrange by multiplying both sides by <span class="arithmatex">\(T^2\)</span> and dividing by <span class="arithmatex">\(r\)</span>:<br/>
+$$ T^2 = \frac{4\pi^2}{G M} r^3 $$  </p>
+<p>This yields <span class="arithmatex">\(T^2 \propto r^3\)</span>, demonstrating that the square of the orbital period is proportional to the cube of the orbital radius, a cornerstone of Kepler’s Third Law.</p>
+<hr/>
+<h2 id="astronomical-significance">🌍 Astronomical Significance</h2>
+<p>Kepler’s Third Law has profound implications:
+1. <strong>Mass Determination</strong>: Using <span class="arithmatex">\(T\)</span> and <span class="arithmatex">\(r\)</span>, the central body’s mass <span class="arithmatex">\(M\)</span> can be calculated (e.g., Earth’s mass from the Moon’s orbit).
+2. <strong>Distance Measurement</strong>: Orbital periods of planets provide their distances from the Sun.
+3. <strong>Orbital Engineering</strong>: This relationship informs the design of satellite trajectories, such as those for navigation systems.</p>
+<hr/>
+<h2 id="computational-analysis">📊 Computational Analysis</h2>
+<p>This section implements a simulation to verify Kepler’s Third Law using real-world data and visualizations.</p>
+<hr/>
+<h3 id="step-1-orbital-data">Step 1: Orbital Data</h3>
+<p>This step presents the orbital parameters for the Moon and select Solar System planets, including their central masses, orbital radii, and periods. The Moon orbits Earth, while Earth, Mars, and Jupiter orbit the Sun, providing a range of scales to test Kepler’s Third Law. The data will serve as the foundation for verifying the <span class="arithmatex">\(T^2 \propto r^3\)</span> relationship in subsequent steps.</p>
+<hr/>
+<h3 id="step-2-circular-orbit-visualization">Step 2: Circular Orbit Visualization 🎬</h3>
+<p>To illustrate the dynamics of a circular orbit, an animated simulation of the Moon’s orbit around Earth is generated. The Moon’s orbital radius of 384,400 km is scaled for visualization, with Earth positioned at the origin. This animation highlights the uniform motion characteristic of a circular orbit, providing a visual representation of the period <span class="arithmatex">\(T\)</span> and radius <span class="arithmatex">\(r\)</span> used in Kepler’s Third Law.</p>
+<hr/>
+<h3 id="step-3-t2-vs-r3-verification">Step 3: <span class="arithmatex">\(T^2\)</span> vs <span class="arithmatex">\(r^3\)</span> Verification</h3>
+<p>A graphical representation confirms the <span class="arithmatex">\(T^2 \propto r^3\)</span> relationship by plotting <span class="arithmatex">\(T^2\)</span> against <span class="arithmatex">\(r^3\)</span> for the Moon and planets. This visualization validates Kepler’s Third Law across different orbital scales, from the Moon’s orbit around Earth to Jupiter’s orbit around the Sun.</p>
+<hr/>
+<h2 id="extension-to-elliptical-orbits">🌠 Extension to Elliptical Orbits</h2>
+<p>For elliptical orbits, Kepler’s Third Law applies with <span class="arithmatex">\(r\)</span> representing the semi-major axis. This generalization extends its utility to diverse celestial phenomena, including comets and exoplanets.</p>
+<hr/>
+<h2 id="summary">🎨 Summary</h2>
+<p>This notebook integrates derivation, simulation, and visualization to elucidate Kepler’s Third Law.</p>
+<hr/>
+<h1 id="cell-1-dependency-check">Cell 1: Dependency Check</h1>
+<p>try:
+    import numpy
+    import pandas
+    import plotly
+    from IPython.display import display, HTML
+    display(HTML("<h3 style="color: #2ECC71;">✅ All Required Libraries Installed</h3>"))
+except ImportError as e:
+    display(HTML("<h3 style="color: #FF5733;">❌ Missing Library: " + str(e) + "</h3>"))
+    display(HTML("<p>Please install the missing library using: <code>pip install " + str(e).split("'")[1] + "</code></p>"))</p>
+<h1 id="cell-2-setup-with-style">Cell 2: Setup with Style</h1>
+<p>import numpy as np
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+from IPython.display import display, HTML</p>
+<p>display(HTML("<h2 style="color: #FF5733; text-align: center;">✨ Libraries Initialized for Analysis ✨</h2>"))</p>
+<h1 id="constants">Constants</h1>
+<p>G = 6.67430e-11  # Gravitational constant (m^3 kg^-1 s^-2)
+M_earth = 5.972e24  # Earth mass (kg)
+M_sun = 1.989e30  # Sun mass (kg)</p>
+<h1 id="cell-3-real-world-data-updated-for-full-visibility">Cell 3: Real-World Data (Updated for Full Visibility)</h1>
+<p>data = pd.DataFrame({
+    'Body': ['Moon', 'Earth', 'Mars', 'Jupiter'],
+    'Central Mass (kg)': [M_earth, M_sun, M_sun, M_sun],
+    'Radius (m)': [384400000, 149.6e9, 227.9e9, 778.5e9],  # Orbital radius
+    'Period (s)': [27.32<em>86400, 365.25</em>86400, 687<em>86400, 4333</em>86400]  # Period in seconds
+})</p>
+<h1 id="format-the-numbers-for-readability-and-ensure-full-visibility">Format the numbers for readability and ensure full visibility</h1>
+<p>styled_data = data.style.format({
+    'Central Mass (kg)': '{:,.0f}',  # Commas, no decimals
+    'Radius (m)': '{:,.0f}',        # Commas, no decimals
+    'Period (s)': '{:,.0f}'         # Commas, no decimals
+}).set_properties(**{
+    'background-color': '#D5F5E3',
+    'border': '2px solid #28B463',
+    'font-size': '14px',
+    'text-align': 'center',
+    'white-space': 'nowrap',  # Prevent text wrapping
+    'padding': '10px'         # Add padding for better spacing
+}).set_table_styles([
+    {
+        'selector': 'th',
+        'props': [
+            ('font-size', '14px'),
+            ('text-align', 'center'),
+            ('white-space', 'nowrap'),
+            ('padding', '10px'),
+            ('min-width', '150px')  # Ensure columns are wide enough
+        ]
+    },
+    {
+        'selector': 'td',
+        'props': [
+            ('min-width', '150px'),  # Ensure cells are wide enough
+            ('max-width', '300px'),  # Prevent overly wide cells
+            ('overflow', 'visible')  # Ensure content is not hidden
+        ]
+    }
+])</p>
+<p>display(HTML("<h3 style="color: #2ECC71;">🌍 Orbital Parameters</h3>"))
+display(styled_data)</p>
+<h1 id="cell-4-animated-circular-orbit">Cell 4: Animated Circular Orbit</h1>
+<p>theta = np.linspace(0, 2*np.pi, 100)
+r = data['Radius (m)'][0]  # Moon’s radius
+x = r * np.cos(theta) / 1e6  # Scale for visualization (km)
+y = r * np.sin(theta) / 1e6</p>
+<p>orbit_data = pd.DataFrame({'x': x, 'y': y, 'frame': np.arange(100)})
+fig = px.scatter(orbit_data, x='x', y='y', animation_frame='frame',
+                 range_x=[-500, 500], range_y=[-500, 500],
+                 title="🎬 Simulation: Moon’s Orbit Around Earth",
+                 color_discrete_sequence=['#FF69B4'],
+                 template='plotly_dark')</p>
+<p>fig.add_trace(go.Scatter(x=[0], y=[0], mode='markers', marker=dict(size=20, color='#3498DB'), name='Earth'))
+fig.update_layout(title_font_size=24, title_x=0.5, font=dict(family="Arial", size=16))
+fig.show()</p>
+<h1 id="cell-5-verify-t2-vs-r3">Cell 5: Verify T^2 vs r^3</h1>
+<p>data['T^2'] = data['Period (s)']<strong>2
+data['r^3'] = data['Radius (m)']</strong>3
+fig2 = px.scatter(data, x='r^3', y='T^2', text='Body', size_max=60,
+                  title="🌟 Verification: T² vs r³ Relationship",
+                  color_discrete_sequence=['#F1C40F'],
+                  template='plotly_white')</p>
+<p>fig2.update_traces(textposition='top center')
+fig2.update_layout(showlegend=False, title_font_size=24, title_x=0.5,
+                   xaxis_title="r³ (m³)", yaxis_title="T² (s²)",
+                   font=dict(family="Arial", size=16))
+fig2.show()</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
