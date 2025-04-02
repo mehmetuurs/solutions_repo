@@ -93,21 +93,3 @@ For elliptical orbits, Kepler’s Third Law applies with  $r$  representing the 
 
 This notebook integrates derivation, simulation, and visualization to elucidate Kepler’s Third Law.
 
----
-
-### Python Code Snippets (with links to Jupyter Notebook)
-
-The following code snippets are used to perform the calculations and generate the visualizations. For the full, executable code, please refer to the [Jupyter Notebook](Problem_1.ipynb).
-
-#### Cell 1: Dependency Check
-
-```python
-try:
-    import numpy
-    import pandas
-    import plotly
-    from IPython.display import display, HTML
-    display(HTML("<h3 style='color: #2ECC71;'>✅ All Required Libraries Installed</h3>"))
-except ImportError as e:
-    display(HTML("<h3 style='color: #FF5733;'>❌ Missing Library: " + str(e) + "</h3>"))
-    display(HTML("<p>Please install the missing library using: <code>pip install " + str(e).split("'")[1] + "</code></p>"))
