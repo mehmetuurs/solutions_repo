@@ -172,6 +172,77 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="gravitational-dynamics-analyzing-keplers-third-law">🌌 Gravitational Dynamics: Analyzing Kepler’s Third Law 🌌</h1>
+<hr/>
+<h2 id="objective">🎯 Objective</h2>
+<p>This notebook investigates the relationship between orbital period and radius through Kepler’s Third Law for circular orbits. It includes a derivation, computational simulation, and analysis of real-world astronomical data.</p>
+<hr/>
+<h2 id="derivation-establishing-keplers-third-law">🚀 Derivation: Establishing Kepler’s Third Law</h2>
+<p>For a body in a circular orbit, the gravitational force balances the centripetal force required for circular motion:</p>
+<ul>
+<li><strong>Gravitational Force</strong>:  <span class="arithmatex">\(F_g = \frac{G M m}{r^2}\)</span></li>
+<li><strong>Centripetal Force</strong>:  <span class="arithmatex">\(F_c = \frac{m v^2}{r}\)</span></li>
+</ul>
+<p>Equating these forces:</p>
+<div class="arithmatex">\[
+\frac{G M m}{r^2} = \frac{m v^2}{r}
+\]</div>
+<p>Cancel <span class="arithmatex">\(m\)</span> (mass of the orbiting body) and simplify:</p>
+<div class="arithmatex">\[
+v^2 = \frac{G M}{r}
+\]</div>
+<p>The orbital velocity is  <span class="arithmatex">\(v = \frac{2\pi r}{T}\)</span>, where  <span class="arithmatex">\(T\)</span>  is the orbital period. Substituting:</p>
+<div class="arithmatex">\[
+\left(\frac{2\pi r}{T}\right)^2 = \frac{G M}{r}
+\]</div>
+<div class="arithmatex">\[
+\frac{4\pi^2 r^2}{T^2} = \frac{G M}{r}
+\]</div>
+<p>Rearrange by multiplying both sides by  <span class="arithmatex">\(T^2\)</span>  and dividing by  <span class="arithmatex">\(r\)</span>:</p>
+<div class="arithmatex">\[
+T^2 = \frac{4\pi^2}{G M} r^3
+\]</div>
+<p>This yields  <span class="arithmatex">\(T^2 \propto r^3\)</span>, demonstrating that the square of the orbital period is proportional to the cube of the orbital radius, a cornerstone of Kepler’s Third Law.</p>
+<hr/>
+<h2 id="astronomical-significance">🌍 Astronomical Significance</h2>
+<p>Kepler’s Third Law has profound implications:</p>
+<ol>
+<li><strong>Mass Determination</strong>: Using  <span class="arithmatex">\(T\)</span>  and  <span class="arithmatex">\(r\)</span>, the central body’s mass  <span class="arithmatex">\(M\)</span>  can be calculated (e.g., Earth’s mass from the Moon’s orbit).</li>
+<li><strong>Distance Measurement</strong>: Orbital periods of planets provide their distances from the Sun.</li>
+<li><strong>Orbital Engineering</strong>: This relationship informs the design of satellite trajectories, such as those for navigation systems.</li>
+</ol>
+<hr/>
+<h2 id="computational-analysis">📊 Computational Analysis</h2>
+<p>This section implements a simulation to verify Kepler’s Third Law using real-world data and visualizations.</p>
+<hr/>
+<h3 id="step-1-orbital-data">Step 1: Orbital Data</h3>
+<p>This step presents the orbital parameters for the Moon and select Solar System planets, including their central masses, orbital radii, and periods. The Moon orbits Earth, while Earth, Mars, and Jupiter orbit the Sun, providing a range of scales to test Kepler’s Third Law. The data will serve as the foundation for verifying the  <span class="arithmatex">\(T^2 \propto r^3\)</span>  relationship in subsequent steps.</p>
+<hr/>
+<h3 id="step-2-circular-orbit-visualization">Step 2: Circular Orbit Visualization 🎬</h3>
+<p>To illustrate the dynamics of a circular orbit, an animated simulation of the Moon’s orbit around Earth is generated. The Moon’s orbital radius of 384,400 km is scaled for visualization, with Earth positioned at the origin. This animation highlights the uniform motion characteristic of a circular orbit, providing a visual representation of the period  <span class="arithmatex">\(T\)</span>  and radius  <span class="arithmatex">\(r\)</span>  used in Kepler’s Third Law.</p>
+<hr/>
+<h3 id="step-3-t2-vs-r3-verification">Step 3:  <span class="arithmatex">\(T^2\)</span>  vs  <span class="arithmatex">\(r^3\)</span>  Verification</h3>
+<p>A graphical representation confirms the  <span class="arithmatex">\(T^2 \propto r^3\)</span>  relationship by plotting  <span class="arithmatex">\(T^2\)</span>  against  <span class="arithmatex">\(r^3\)</span>  for the Moon and planets. This visualization validates Kepler’s Third Law across different orbital scales, from the Moon’s orbit around Earth to Jupiter’s orbit around the Sun.</p>
+<hr/>
+<h2 id="extension-to-elliptical-orbits">🌠 Extension to Elliptical Orbits</h2>
+<p>For elliptical orbits, Kepler’s Third Law applies with  <span class="arithmatex">\(r\)</span>  representing the semi-major axis. This generalization extends its utility to diverse celestial phenomena, including comets and exoplanets.</p>
+<hr/>
+<h2 id="summary">🎨 Summary</h2>
+<p>This notebook integrates derivation, simulation, and visualization to elucidate Kepler’s Third Law.</p>
+<hr/>
+<h3 id="python-code-snippets-with-links-to-jupyter-notebook">Python Code Snippets (with links to Jupyter Notebook)</h3>
+<p>The following code snippets are used to perform the calculations and generate the visualizations. For the full, executable code, please refer to the <a href="../Problem_1.ipynb">Jupyter Notebook</a>.</p>
+<h4 id="cell-1-dependency-check">Cell 1: Dependency Check</h4>
+<p>```python
+try:
+    import numpy
+    import pandas
+    import plotly
+    from IPython.display import display, HTML
+    display(HTML("<h3 style="color: #2ECC71;">✅ All Required Libraries Installed</h3>"))
+except ImportError as e:
+    display(HTML("<h3 style="color: #FF5733;">❌ Missing Library: " + str(e) + "</h3>"))
+    display(HTML("<p>Please install the missing library using: <code>pip install " + str(e).split("'")[1] + "</code></p>"))</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
