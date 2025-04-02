@@ -1,77 +1,169 @@
-# Interference Patterns on a Water Surface
+# 🌌 Gravitational Dynamics: Analyzing Kepler’s Third Law 🌌
 
-## Motivation
-Interference occurs when waves from different sources overlap, creating new patterns. On a water surface, this can be observed when ripples from multiple points meet, forming distinctive interference patterns. These patterns demonstrate how waves combine, either reinforcing (constructive interference) or canceling each other (destructive interference). Studying these patterns provides a visual and intuitive way to understand wave behavior and explore concepts like phase relationships and multi-source interactions, with applications in physics and engineering.
-## Problem Statement
-We aim to analyze the interference patterns formed by the superposition of circular waves emitted from point sources located at the vertices of a regular polygon. For this example, we choose an **equilateral triangle** as the regular polygon.
+---
 
-A single circular wave from a point source at position $(x_s, y_s)$ is described by the equation:
+## 🎯 Objective
+This notebook investigates the relationship between orbital period and radius through Kepler’s Third Law for circular orbits. It includes a derivation, computational simulation, and analysis of real-world astronomical data. 
 
-$$ \eta(x, y, t) = A \cos(k r - \omega t + \phi) $$
+---
 
-where:
-- $\eta(x, y, t)$ is the water surface displacement at point $(x, y)$ and time $t$,
-- $A$ is the amplitude,
-- $k = \frac{2\pi}{\lambda}$ is the wave number, with $\lambda$ as the wavelength,
-- $r = \sqrt{(x - x_s)^2 + (y - y_s)^2}$ is the distance from the source,
-- $\omega = 2\pi f$ is the angular frequency, with $f$ as the frequency,
-- $\phi$ is the initial phase.
+## 🚀 Derivation: Establishing Kepler’s Third Law
+For a body in a circular orbit, the gravitational force balances the centripetal force required for circular motion:
 
-For multiple sources, the total displacement is the sum of individual waves (superposition):
+- **Gravitational Force**: $F_g = \frac{G M m}{r^2}$
+- **Centripetal Force**: $F_c = \frac{m v^2}{r}$
 
-$$ \eta_{\text{total}}(x, y, t) = \sum_{i=1}^{N} \eta_i(x, y, t) $$
+Equating these forces:  
+$$ \frac{G M m}{r^2} = \frac{m v^2}{r} $$  
+Cancel $m$ (mass of the orbiting body) and simplify:  
+$$ v^2 = \frac{G M}{r} $$
 
-where $N$ is the number of sources (vertices of the polygon).
-## Steps and Solution
+The orbital velocity is $v = \frac{2\pi r}{T}$, where $T$ is the orbital period. Substituting:  
+$$ \left(\frac{2\pi r}{T}\right)^2 = \frac{G M}{r} $$  
+$$ \frac{4\pi^2 r^2}{T^2} = \frac{G M}{r} $$  
+Rearrange by multiplying both sides by $T^2$ and dividing by $r$:  
+$$ T^2 = \frac{4\pi^2}{G M} r^3 $$  
 
-### 1. Select a Regular Polygon
-We choose an **equilateral triangle** with vertices at:
-- $(x_1, y_1) = (0, 1)$,
-- $(x_2, y_2) = \left(\frac{\sqrt{3}}{2}, -\frac{1}{2}\right)$,
-- $(x_3, y_3) = \left(-\frac{\sqrt{3}}{2}, -\frac{1}{2}\right)$.
+This yields $T^2 \propto r^3$, demonstrating that the square of the orbital period is proportional to the cube of the orbital radius, a cornerstone of Kepler’s Third Law.
 
-These coordinates place the triangle's centroid at the origin $(0, 0)$ with a side length of $\sqrt{3}$.
+---
 
-### 2. Position the Sources
-The wave sources are placed at the triangle's vertices as listed above.
+## 🌍 Astronomical Significance
+Kepler’s Third Law has profound implications:
+1. **Mass Determination**: Using $T$ and $r$, the central body’s mass $M$ can be calculated (e.g., Earth’s mass from the Moon’s orbit).
+2. **Distance Measurement**: Orbital periods of planets provide their distances from the Sun.
+3. **Orbital Engineering**: This relationship informs the design of satellite trajectories, such as those for navigation systems.
 
-### 3. Wave Equations
-For each source $i$ at $(x_i, y_i)$, the wave equation is:
+---
 
-$$ \eta_i(x, y, t) = A \cos(k r_i - \omega t + \phi) $$
+## 📊 Computational Analysis
+This section implements a simulation to verify Kepler’s Third Law using real-world data and visualizations.
 
-where $r_i = \sqrt{(x - x_i)^2 + (y - y_i)^2}$. We assume:
-- $A = 1$ (same amplitude for all sources),
-- $\lambda = 1$ (wavelength), so $k = \frac{2\pi}{1} = 2\pi$,
-- $f = 1$ (frequency), so $\omega = 2\pi \cdot 1 = 2\pi$,
-- $\phi = 0$ (coherent sources with no phase difference).
+---
 
-### 4. Superposition of Waves
-The total displacement is:
+### Step 1: Orbital Data
+This step presents the orbital parameters for the Moon and select Solar System planets, including their central masses, orbital radii, and periods. The Moon orbits Earth, while Earth, Mars, and Jupiter orbit the Sun, providing a range of scales to test Kepler’s Third Law. The data will serve as the foundation for verifying the $T^2 \propto r^3$ relationship in subsequent steps.
 
-$$ \eta_{\text{total}}(x, y, t) = \sum_{i=1}^{3} A \cos(k r_i - \omega t) $$
+---
+
+### Step 2: Circular Orbit Visualization 🎬
+To illustrate the dynamics of a circular orbit, an animated simulation of the Moon’s orbit around Earth is generated. The Moon’s orbital radius of 384,400 km is scaled for visualization, with Earth positioned at the origin. This animation highlights the uniform motion characteristic of a circular orbit, providing a visual representation of the period $T$ and radius $r$ used in Kepler’s Third Law.
+
+---
+
+### Step 3: $T^2$ vs $r^3$ Verification
+A graphical representation confirms the $T^2 \propto r^3$ relationship by plotting $T^2$ against $r^3$ for the Moon and planets. This visualization validates Kepler’s Third Law across different orbital scales, from the Moon’s orbit around Earth to Jupiter’s orbit around the Sun.
+
+---
+
+## 🌠 Extension to Elliptical Orbits
+For elliptical orbits, Kepler’s Third Law applies with $r$ representing the semi-major axis. This generalization extends its utility to diverse celestial phenomena, including comets and exoplanets.
+
+---
+
+## 🎨 Summary
+This notebook integrates derivation, simulation, and visualization to elucidate Kepler’s Third Law.
 
 
-![image](https://github.com/user-attachments/assets/58c66c8d-0ee5-4d22-8492-bc3a0563b16d)
+---
 
+# Cell 1: Dependency Check
+try:
+    import numpy
+    import pandas
+    import plotly
+    from IPython.display import display, HTML
+    display(HTML("<h3 style='color: #2ECC71;'>✅ All Required Libraries Installed</h3>"))
+except ImportError as e:
+    display(HTML("<h3 style='color: #FF5733;'>❌ Missing Library: " + str(e) + "</h3>"))
+    display(HTML("<p>Please install the missing library using: <code>pip install " + str(e).split("'")[1] + "</code></p>"))
 
+# Cell 2: Setup with Style
+import numpy as np
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+from IPython.display import display, HTML
 
-### 5. Analyze Interference Patterns
-- **Constructive Interference**: Occurs where waves from all sources are in phase (e.g., crests align), resulting in larger amplitudes (bright red/blue regions in the plot).
-- **Destructive Interference**: Occurs where waves are out of phase (e.g., crest meets trough), resulting in near-zero displacement (white regions).
+display(HTML("<h2 style='color: #FF5733; text-align: center;'>✨ Libraries Initialized for Analysis ✨</h2>"))
 
-For the equilateral triangle:
-- Symmetry in the pattern reflects the triangle's geometry.
-- High-amplitude regions form near the center and along symmetric axes.
-- Cancellation occurs in regions where waves from different sources arrive with opposite phases.
+# Constants
+G = 6.67430e-11  # Gravitational constant (m^3 kg^-1 s^-2)
+M_earth = 5.972e24  # Earth mass (kg)
+M_sun = 1.989e30  # Sun mass (kg)
 
-### 6. Visualization
-The plot above shows the water surface displacement at $t = 0$. Red and blue indicate positive and negative displacements (crests and troughs), while white indicates destructive interference.
+# Cell 3: Real-World Data (Updated for Full Visibility)
+data = pd.DataFrame({
+    'Body': ['Moon', 'Earth', 'Mars', 'Jupiter'],
+    'Central Mass (kg)': [M_earth, M_sun, M_sun, M_sun],
+    'Radius (m)': [384400000, 149.6e9, 227.9e9, 778.5e9],  # Orbital radius
+    'Period (s)': [27.32*86400, 365.25*86400, 687*86400, 4333*86400]  # Period in seconds
+})
 
-## Results
-The interference pattern for three sources at the vertices of an equilateral triangle exhibits:
-- A central region of constructive interference due to overlapping crests.
-- Radiating bands of alternating constructive and destructive interference, forming a triangular symmetry.
-- The pattern evolves over time with $\omega t$, but the snapshot at $t = 0$ captures the initial state.
+# Format the numbers for readability and ensure full visibility
+styled_data = data.style.format({
+    'Central Mass (kg)': '{:,.0f}',  # Commas, no decimals
+    'Radius (m)': '{:,.0f}',        # Commas, no decimals
+    'Period (s)': '{:,.0f}'         # Commas, no decimals
+}).set_properties(**{
+    'background-color': '#D5F5E3',
+    'border': '2px solid #28B463',
+    'font-size': '14px',
+    'text-align': 'center',
+    'white-space': 'nowrap',  # Prevent text wrapping
+    'padding': '10px'         # Add padding for better spacing
+}).set_table_styles([
+    {
+        'selector': 'th',
+        'props': [
+            ('font-size', '14px'),
+            ('text-align', 'center'),
+            ('white-space', 'nowrap'),
+            ('padding', '10px'),
+            ('min-width', '150px')  # Ensure columns are wide enough
+        ]
+    },
+    {
+        'selector': 'td',
+        'props': [
+            ('min-width', '150px'),  # Ensure cells are wide enough
+            ('max-width', '300px'),  # Prevent overly wide cells
+            ('overflow', 'visible')  # Ensure content is not hidden
+        ]
+    }
+])
 
-This simulation illustrates how wave superposition depends on source positioning and phase coherence, offering insights into wave physics in a tangible, visual format.
+display(HTML("<h3 style='color: #2ECC71;'>🌍 Orbital Parameters</h3>"))
+display(styled_data)
+
+# Cell 4: Animated Circular Orbit
+theta = np.linspace(0, 2*np.pi, 100)
+r = data['Radius (m)'][0]  # Moon’s radius
+x = r * np.cos(theta) / 1e6  # Scale for visualization (km)
+y = r * np.sin(theta) / 1e6
+
+orbit_data = pd.DataFrame({'x': x, 'y': y, 'frame': np.arange(100)})
+fig = px.scatter(orbit_data, x='x', y='y', animation_frame='frame',
+                 range_x=[-500, 500], range_y=[-500, 500],
+                 title="🎬 Simulation: Moon’s Orbit Around Earth",
+                 color_discrete_sequence=['#FF69B4'],
+                 template='plotly_dark')
+
+fig.add_trace(go.Scatter(x=[0], y=[0], mode='markers', marker=dict(size=20, color='#3498DB'), name='Earth'))
+fig.update_layout(title_font_size=24, title_x=0.5, font=dict(family="Arial", size=16))
+fig.show()
+
+# Cell 5: Verify T^2 vs r^3
+data['T^2'] = data['Period (s)']**2
+data['r^3'] = data['Radius (m)']**3
+fig2 = px.scatter(data, x='r^3', y='T^2', text='Body', size_max=60,
+                  title="🌟 Verification: T² vs r³ Relationship",
+                  color_discrete_sequence=['#F1C40F'],
+                  template='plotly_white')
+
+fig2.update_traces(textposition='top center')
+fig2.update_layout(showlegend=False, title_font_size=24, title_x=0.5,
+                   xaxis_title="r³ (m³)", yaxis_title="T² (s²)",
+                   font=dict(family="Arial", size=16))
+fig2.show()
+
