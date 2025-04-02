@@ -93,3 +93,14 @@ For elliptical orbits, Kepler’s Third Law applies with  $r$  representing the 
 
 This notebook integrates derivation, simulation, and visualization to elucidate Kepler’s Third Law.
 
+![image](https://github.com/user-attachments/assets/a49e167b-c08f-4331-a9aa-3264d3f3d10f)
+
+
+
+![ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/25e1a684-a3bb-40eb-bc1d-9d3313994f07)
+
+
+![image](https://github.com/user-attachments/assets/9276570d-22d3-4e5d-94f5-bee49dc93125)
+
+
+
