@@ -1,86 +1,106 @@
-# Gravity and Orbital Motion
+# Problem 1
 
-## Problem 1: Orbital Period and Orbital Radius
-
-### **Motivation: Why is this Important?**
-
-One of the most fascinating aspects of planetary motion is that the relationship between a planet's orbital period and its distance from the central body follows a simple yet profound mathematical pattern. This pattern is known as **Kepler’s Third Law** and is essential in astronomy, space exploration, and understanding gravity.  
-
-By studying this law, we can:  
-1. **Predict planetary positions** in the Solar System.  
-2. **Determine the masses of celestial bodies** (such as the mass of the Sun or planets).  
-3. **Calculate satellite orbits** for GPS, communication, and space missions.  
-4. **Understand exoplanet systems**, where distant planets are detected using orbital data.  
-
-This law applies to **any object in orbit**, whether it's the Moon around the Earth, satellites around a planet, or planets around a star. Now, let’s derive this relationship.
+# 🌌 Gravitational Dynamics: Analyzing Kepler’s Third Law 🌌
 
 ---
 
-## **Step 1: Deriving Kepler’s Third Law for Circular Orbits**
+## 🎯 Objective
 
-Newton’s version of **Kepler’s Third Law** states:
-
-$$ T^2 = \frac{4\pi^2 r^3}{GM} $$
-
-where:  
-- $T$ = orbital period (seconds)  
-- $r$ = orbital radius (meters)  
-- $G$ = universal gravitational constant ($6.674 \times 10^{-11} \text{m}^3 \text{kg}^{-1} \text{s}^{-2}$)  
-- $M$ = mass of the central body (kilograms, e.g., Earth or the Sun)
-
-### **Understanding the Physics Behind It**
-The force keeping an object in orbit is **gravity**, which acts as a centripetal force:
-
-$$ F_g = \frac{GMm}{r^2} $$
-
-where $m$ is the mass of the orbiting body (e.g., a satellite or planet).  
-At the same time, the object moves in a circular path, meaning the centripetal force is:
-
-$$ F_c = \frac{m v^2}{r} $$
-
-Since gravity is the only force keeping the object in orbit, these two forces must be equal:
-
-$$ \frac{GMm}{r^2} = \frac{m v^2}{r} $$
-
-Canceling out $m$ and solving for velocity $v$:
-
-$$ v^2 = \frac{GM}{r} $$
-
-Since orbital velocity is also given by $ v = \frac{2\pi r}{T} $, we substitute:
-
-$$ \left( \frac{2\pi r}{T} \right)^2 = \frac{GM}{r} $$
-
-Expanding and solving for $T^2$:
-
-$$ T^2 = \frac{4\pi^2 r^3}{GM} $$
-
-This proves that the **square of the orbital period is directly proportional to the cube of the orbital radius**.
+This notebook investigates the relationship between orbital period and radius through Kepler’s Third Law for circular orbits. It includes a derivation, computational simulation, and analysis of real-world astronomical data.
 
 ---
 
-## **Step 2: Why Does This Matter?**
+## 🚀 Derivation: Establishing Kepler’s Third Law
 
-### **Real-World Applications**
-- **The Moon’s Orbit:** By measuring the Moon’s orbital period, we can determine the mass of the Earth.  
-- **Planetary Motion:** Scientists use this law to predict how planets move around the Sun.  
-- **Space Missions:** Space agencies calculate satellite orbits using this principle.  
-- **Exoplanet Discovery:** Astronomers use orbital periods to estimate the masses and distances of planets outside our Solar System.
+For a body in a circular orbit, the gravitational force balances the centripetal force required for circular motion:
 
-### **Verification with Data**
-- If we measure orbital radius ($r$) and period ($T$) for different satellites and planets, plotting $T^2$ vs. $r^3$ should give a straight line.
-- This confirms the law experimentally.
+-   **Gravitational Force**:  $F_g = \frac{G M m}{r^2}$
+-   **Centripetal Force**:  $F_c = \frac{m v^2}{r}$
+
+Equating these forces:
+
+$$
+\frac{G M m}{r^2} = \frac{m v^2}{r}
+$$
+
+Cancel $m$ (mass of the orbiting body) and simplify:
+
+$$
+v^2 = \frac{G M}{r}
+$$
+
+The orbital velocity is  $v = \frac{2\pi r}{T}$, where  $T$  is the orbital period. Substituting:
+
+$$
+\left(\frac{2\pi r}{T}\right)^2 = \frac{G M}{r}
+$$
+
+$$
+\frac{4\pi^2 r^2}{T^2} = \frac{G M}{r}
+$$
+
+Rearrange by multiplying both sides by  $T^2$  and dividing by  $r$:
+
+$$
+T^2 = \frac{4\pi^2}{G M} r^3
+$$
+
+This yields  $T^2 \propto r^3$, demonstrating that the square of the orbital period is proportional to the cube of the orbital radius, a cornerstone of Kepler’s Third Law.
 
 ---
 
-## **Step 3: Computational Model & Simulations**
+## 🌍 Astronomical Significance
 
-To make this law more intuitive, let’s visualize it using Python.  
-We will:
-1. **Plot the relationship between $T^2$ and $r^3$** to confirm the law.
-2. **Simulate a circular orbit** to visualize planetary motion.
+Kepler’s Third Law has profound implications:
+
+1.  **Mass Determination**: Using  $T$  and  $r$, the central body’s mass  $M$  can be calculated (e.g., Earth’s mass from the Moon’s orbit).
+2.  **Distance Measurement**: Orbital periods of planets provide their distances from the Sun.
+3.  **Orbital Engineering**: This relationship informs the design of satellite trajectories, such as those for navigation systems.
+
+---
+
+## 📊 Computational Analysis
+
+This section implements a simulation to verify Kepler’s Third Law using real-world data and visualizations.
+
+---
+
+### Step 1: Orbital Data
+
+This step presents the orbital parameters for the Moon and select Solar System planets, including their central masses, orbital radii, and periods. The Moon orbits Earth, while Earth, Mars, and Jupiter orbit the Sun, providing a range of scales to test Kepler’s Third Law. The data will serve as the foundation for verifying the  $T^2 \propto r^3$  relationship in subsequent steps.
+
+---
+
+### Step 2: Circular Orbit Visualization 🎬
+
+To illustrate the dynamics of a circular orbit, an animated simulation of the Moon’s orbit around Earth is generated. The Moon’s orbital radius of 384,400 km is scaled for visualization, with Earth positioned at the origin. This animation highlights the uniform motion characteristic of a circular orbit, providing a visual representation of the period  $T$  and radius  $r$  used in Kepler’s Third Law.
+
+---
+
+### Step 3:  $T^2$  vs  $r^3$  Verification
+
+A graphical representation confirms the  $T^2 \propto r^3$  relationship by plotting  $T^2$  against  $r^3$  for the Moon and planets. This visualization validates Kepler’s Third Law across different orbital scales, from the Moon’s orbit around Earth to Jupiter’s orbit around the Sun.
+
+---
+
+## 🌠 Extension to Elliptical Orbits
+
+For elliptical orbits, Kepler’s Third Law applies with  $r$  representing the semi-major axis. This generalization extends its utility to diverse celestial phenomena, including comets and exoplanets.
+
+---
+
+## 🎨 Summary
+
+This notebook integrates derivation, simulation, and visualization to elucidate Kepler’s Third Law.
+
+![image](https://github.com/user-attachments/assets/a49e167b-c08f-4331-a9aa-3264d3f3d10f)
 
 
-![image](https://github.com/user-attachments/assets/eb13d284-e24f-49dc-99cd-112cfbb51b0f)
 
-![image](https://github.com/user-attachments/assets/65c421ab-62e2-4c28-b93c-11c3f93cc252)
+![ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/25e1a684-a3bb-40eb-bc1d-9d3313994f07)
+
+
+![image](https://github.com/user-attachments/assets/9276570d-22d3-4e5d-94f5-bee49dc93125)
+
+
 
