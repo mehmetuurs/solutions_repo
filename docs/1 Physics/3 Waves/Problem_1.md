@@ -120,6 +120,15 @@ Understanding wave interference on a water surface has applications in:
 
 ---
 
+![image](https://github.com/user-attachments/assets/c57cfd1e-1265-44c3-9355-6d6a36eb569a)
+
+
+
+
+![image](https://github.com/user-attachments/assets/74cc7984-1fd1-4c81-9bd4-90c9728bf7dc)
+
+
+
 
 ![image](https://github.com/user-attachments/assets/e1d9bf4a-302a-4b7b-b8dd-015cc8b8350f)
 
