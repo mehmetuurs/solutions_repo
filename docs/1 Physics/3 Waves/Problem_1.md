@@ -136,3 +136,6 @@ Understanding wave interference on a water surface has applications in:
 
 
 
+
+![interference_pattern](https://github.com/user-attachments/assets/deb1ce51-54fb-4e6e-b772-6e85986302e6)
+
