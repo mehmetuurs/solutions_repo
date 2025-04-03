@@ -206,63 +206,124 @@
 \eta(x, y, t) = A \cos(k r - \omega t + \phi)
 \]</div>
 <p>where:
-- <span class="arithmatex">\(\eta(x, y, t)\)</span>: Displacement at point <span class="arithmatex">\((x, y)\)</span> and time <span class="arithmatex">\(t\)</span>.
-- <span class="arithmatex">\(A\)</span>: Amplitude.
-- <span class="arithmatex">\(k = \frac{2\pi}{\lambda}\)</span>: Wave number, with <span class="arithmatex">\(\lambda\)</span> as the wavelength.
-- <span class="arithmatex">\(r = \sqrt{(x - x_s)^2 + (y - y_s)^2}\)</span>: Distance from the source.
-- <span class="arithmatex">\(\omega = 2\pi f\)</span>: Angular frequency, with <span class="arithmatex">\(f\)</span> as the frequency.
-- <span class="arithmatex">\(\phi\)</span>: Initial phase.</p>
+- <span class="arithmatex">\(\eta(x, y, t)\)</span>: Displacement at point <span class="arithmatex">\((x, y)\)</span> and time <span class="arithmatex">\(t\)</span>.</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(A\)</span>: Amplitude.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(k = \frac{2\pi}{\lambda}\)</span>: Wave number, with <span class="arithmatex">\(\lambda\)</span> as the wavelength.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(r = \sqrt{(x - x_s)^2 + (y - y_s)^2}\)</span>: Distance from the source.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\omega = 2\pi f\)</span>: Angular frequency, with <span class="arithmatex">\(f\)</span> as the frequency.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\phi\)</span>: Initial phase.</p>
+</li>
+</ul>
 <p><strong>Interference Types</strong>:
-- <strong>Constructive Interference</strong>: Occurs when waves are in phase (phase difference <span class="arithmatex">\(\Delta\phi \approx 0\)</span>), leading to amplification (larger displacement).
-- <strong>Destructive Interference</strong>: Occurs when waves are out of phase (phase difference <span class="arithmatex">\(\Delta\phi \approx \pi\)</span>), leading to cancellation (smaller or zero displacement).</p>
+- <strong>Constructive Interference</strong>: Occurs when waves are in phase (phase difference <span class="arithmatex">\(\Delta\phi \approx 0\)</span>), leading to amplification (larger displacement).</p>
+<ul>
+<li><strong>Destructive Interference</strong>: Occurs when waves are out of phase (phase difference <span class="arithmatex">\(\Delta\phi \approx \pi\)</span>), leading to cancellation (smaller or zero displacement).</li>
+</ul>
 <hr/>
 <h2 id="simulation-setup">📊 Simulation Setup</h2>
 <p>We will simulate interference patterns using the following steps:
-1. <strong>Choose a Regular Polygon</strong>: Select a square with four vertices as the positions of the wave sources.
-2. <strong>Position the Sources</strong>: Place the sources at the vertices of the square.
-3. <strong>Wave Equations</strong>: Define the wave equation for each source.
-4. <strong>Superposition</strong>: Compute the total displacement by summing the contributions from all sources.
-5. <strong>Visualization</strong>: Plot the interference patterns to identify constructive and destructive regions.</p>
+1. <strong>Choose a Regular Polygon</strong>: Select a square with four vertices as the positions of the wave sources.</p>
+<ol>
+<li>
+<p><strong>Position the Sources</strong>: Place the sources at the vertices of the square.</p>
+</li>
+<li>
+<p><strong>Wave Equations</strong>: Define the wave equation for each source.</p>
+</li>
+<li>
+<p><strong>Superposition</strong>: Compute the total displacement by summing the contributions from all sources.</p>
+</li>
+<li>
+<p><strong>Visualization</strong>: Plot the interference patterns to identify constructive and destructive regions.</p>
+</li>
+</ol>
 <hr/>
 <h3 id="step-1-define-the-polygon-and-source-positions">Step 1: Define the Polygon and Source Positions</h3>
 <p>We choose a square with side length 2 units, centered at the origin. The vertices (and thus the positions of the wave sources) are:
-- <span class="arithmatex">\((1, 1)\)</span>
-- <span class="arithmatex">\((1, -1)\)</span>
-- <span class="arithmatex">\((-1, -1)\)</span>
-- <span class="arithmatex">\((-1, 1)\)</span></p>
+- <span class="arithmatex">\((1, 1)\)</span></p>
+<ul>
+<li>
+<p><span class="arithmatex">\((1, -1)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\((-1, -1)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\((-1, 1)\)</span></p>
+</li>
+</ul>
 <hr/>
 <h3 id="step-2-wave-parameters">Step 2: Wave Parameters</h3>
 <p>We assume the following parameters for all sources (coherent waves):
-- Amplitude <span class="arithmatex">\(A = 1\)</span> unit.
-- Wavelength <span class="arithmatex">\(\lambda = 0.5\)</span> units.
-- Frequency <span class="arithmatex">\(f = 1\)</span> Hz.
-- Initial phase <span class="arithmatex">\(\phi = 0\)</span>.</p>
+- Amplitude <span class="arithmatex">\(A = 1\)</span> unit.</p>
+<ul>
+<li>
+<p>Wavelength <span class="arithmatex">\(\lambda = 0.5\)</span> units.</p>
+</li>
+<li>
+<p>Frequency <span class="arithmatex">\(f = 1\)</span> Hz.</p>
+</li>
+<li>
+<p>Initial phase <span class="arithmatex">\(\phi = 0\)</span>.</p>
+</li>
+</ul>
 <p>Thus:
-- Wave number <span class="arithmatex">\(k = \frac{2\pi}{\lambda} = \frac{2\pi}{0.5} = 4\pi\)</span>.
-- Angular frequency <span class="arithmatex">\(\omega = 2\pi f = 2\pi \times 1 = 2\pi\)</span>.</p>
+- Wave number <span class="arithmatex">\(k = \frac{2\pi}{\lambda} = \frac{2\pi}{0.5} = 4\pi\)</span>.</p>
+<ul>
+<li>Angular frequency <span class="arithmatex">\(\omega = 2\pi f = 2\pi \times 1 = 2\pi\)</span>.</li>
+</ul>
 <hr/>
 <h3 id="step-3-simulate-the-interference-pattern">Step 3: Simulate the Interference Pattern</h3>
 <p>We will:
-- Create a 2D grid to represent the water surface.
-- Calculate the displacement from each source at each grid point.
-- Sum the displacements to get the total wave pattern.
-- Visualize the pattern at a fixed time <span class="arithmatex">\(t\)</span> (e.g., <span class="arithmatex">\(t = 0\)</span>).</p>
+- Create a 2D grid to represent the water surface.</p>
+<ul>
+<li>
+<p>Calculate the displacement from each source at each grid point.</p>
+</li>
+<li>
+<p>Sum the displacements to get the total wave pattern.</p>
+</li>
+<li>
+<p>Visualize the pattern at a fixed time <span class="arithmatex">\(t\)</span> (e.g., <span class="arithmatex">\(t = 0\)</span>).</p>
+</li>
+</ul>
 <hr/>
 <h3 id="step-4-visualize-the-results">Step 4: Visualize the Results</h3>
 <p>We’ll use a heatmap to show the displacement <span class="arithmatex">\(\eta_{\text{total}}(x, y, t)\)</span> across the water surface, highlighting regions of constructive and destructive interference. We’ll also create an animated plot to show how the pattern evolves over time.</p>
 <hr/>
 <h2 id="analysis-of-interference-patterns">🔍 Analysis of Interference Patterns</h2>
 <p>After simulating the interference, we will analyze:
-- <strong>Constructive Interference</strong>: Regions where the displacement is maximized (bright areas in the heatmap).
-- <strong>Destructive Interference</strong>: Regions where the displacement is minimized or zero (dark areas in the heatmap).</p>
+- <strong>Constructive Interference</strong>: Regions where the displacement is maximized (bright areas in the heatmap).</p>
+<ul>
+<li><strong>Destructive Interference</strong>: Regions where the displacement is minimized or zero (dark areas in the heatmap).</li>
+</ul>
 <hr/>
 <h2 id="applications">🌟 Applications</h2>
 <p>Understanding wave interference on a water surface has applications in:
-- <strong>Physics Education</strong>: Visualizing wave superposition in a tangible way.
-- <strong>Acoustics</strong>: Designing sound systems to avoid dead spots (destructive interference).
-- <strong>Optics</strong>: Analyzing light interference in phenomena like thin-film interference.
-- <strong>Oceanography</strong>: Studying wave interactions in coastal engineering.</p>
+- <strong>Physics Education</strong>: Visualizing wave superposition in a tangible way.</p>
+<ul>
+<li>
+<p><strong>Acoustics</strong>: Designing sound systems to avoid dead spots (destructive interference).</p>
+</li>
+<li>
+<p><strong>Optics</strong>: Analyzing light interference in phenomena like thin-film interference.</p>
+</li>
+<li>
+<p><strong>Oceanography</strong>: Studying wave interactions in coastal engineering.</p>
+</li>
+</ul>
 <hr/>
+<p><img alt="image" src="https://github.com/user-attachments/assets/e1d9bf4a-302a-4b7b-b8dd-015cc8b8350f"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
