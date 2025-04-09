@@ -85,18 +85,7 @@ We’ll simulate the particle’s motion for the three scenarios, visualize the 
 
 
 
-![image](https://github.com/user-attachments/assets/16b4bdaa-016a-4b94-8dc0-1d2d3474ad8d)
-
-
-
-
-
-
-
-
-
-
-![image](https://github.com/user-attachments/assets/c835f502-63da-44db-b740-f5d72453509d)
+![image](https://github.com/user-attachments/assets/3a89bfef-ca62-45e6-9936-d500c1a8f26e)
 
 
 
@@ -108,8 +97,22 @@ We’ll simulate the particle’s motion for the three scenarios, visualize the 
 
 
 
+![image](https://github.com/user-attachments/assets/1faa4867-16f4-4977-a86e-c8afc3b2a15f)
 
-![image](https://github.com/user-attachments/assets/b3f908b7-16dd-4740-98bc-71e37fad71a5)
+
+
+
+
+
+
+
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/82db8315-3f63-4e49-abaa-923458d5ddda)
+
 
 
 
