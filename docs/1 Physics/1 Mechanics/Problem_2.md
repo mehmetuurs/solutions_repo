@@ -48,9 +48,6 @@ Resonance occurs when $\omega \approx \sqrt{g/L}$, leading to maximum amplitude 
 
 ## 4. Implementation
 
-![image](https://github.com/user-attachments/assets/cbbe5919-c2d1-48cf-b1df-5d4a0559aa80)
-
-![image](https://github.com/user-attachments/assets/1b491509-1fec-4667-ab30-36a57f70a23c)
 
 
 
