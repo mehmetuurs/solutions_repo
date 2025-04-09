@@ -85,6 +85,7 @@ We’ll simulate the particle’s motion for the three scenarios, visualize the 
 
 
 
+![image](https://github.com/user-attachments/assets/23a5ede1-4f9f-4f4d-9323-8c193cbbffe3)
 
 
 
@@ -94,12 +95,17 @@ We’ll simulate the particle’s motion for the three scenarios, visualize the 
 
 
 
+![image](https://github.com/user-attachments/assets/c69f103b-73e3-4f00-bb9f-15ee42918977)
 
 
 
 
 
 
+
+
+
+![image](https://github.com/user-attachments/assets/b3f908b7-16dd-4740-98bc-71e37fad71a5)
 
 
 
@@ -132,8 +138,4 @@ We’ll simulate the particle’s motion for the three scenarios, visualize the 
 - Add time-varying fields to explore phenomena like magnetic reconnection.
 - Include relativistic effects for high-speed particles, modifying the Lorentz force equation.
 
----
 
-<div style="text-align: center;">
-<h2 style="color: #3498DB;">🎊 Simulation Complete: Lorentz Force Effects Visualized 🎊</h2>
-</div>
