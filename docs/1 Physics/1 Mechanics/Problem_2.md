@@ -48,20 +48,31 @@ Resonance occurs when $\omega \approx \sqrt{g/L}$, leading to maximum amplitude 
 
 ## 4. Implementation
 
-![image](https://github.com/user-attachments/assets/9f6215fe-0f81-4005-9d76-c42b5a64f8e0)
+![image](https://github.com/user-attachments/assets/ef628fde-6174-4f79-9f12-a73d52c24575)
 
 
 
-![image](https://github.com/user-attachments/assets/fe026bf6-7d08-4b59-8b17-1f806890ab10)
-
-
-
-![image](https://github.com/user-attachments/assets/e09e62a1-e404-4184-b2ef-a99a5dff70f4)
+![image](https://github.com/user-attachments/assets/cbab938a-247c-40ec-8d49-ceddf8929682)
 
 
 
 
-![image](https://github.com/user-attachments/assets/ca8560df-1999-4f80-8607-2ecdfb3aea96)
+![image](https://github.com/user-attachments/assets/1d84821c-469e-4dcf-a2e9-289442a06c71)
+
+
+
+
+![image](https://github.com/user-attachments/assets/1a51850f-41dc-49ee-b532-b2b79d5045e8)
+
+
+
+
+![image](https://github.com/user-attachments/assets/a9bafb27-58ad-4355-9481-df23fce32283)
+
+
+
+
+![image](https://github.com/user-attachments/assets/f1f69540-ba3b-4e2f-8277-71bb2293cbad)
 
 
 
