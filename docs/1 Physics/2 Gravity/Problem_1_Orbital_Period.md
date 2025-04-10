@@ -100,7 +100,7 @@ This notebook integrates derivation, simulation, and visualization to elucidate 
 ![ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/25e1a684-a3bb-40eb-bc1d-9d3313994f07)
 
 
-![image](https://github.com/user-attachments/assets/9276570d-22d3-4e5d-94f5-bee49dc93125)
+![image](https://github.com/user-attachments/assets/af0953e3-3f29-414c-ade5-945b253805af)
 
 
 
