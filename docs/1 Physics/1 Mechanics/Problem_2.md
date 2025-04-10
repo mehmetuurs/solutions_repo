@@ -72,9 +72,6 @@ Resonance occurs when $\omega \approx \sqrt{g/L}$, leading to maximum amplitude 
 
 
 
-![image](https://github.com/user-attachments/assets/f1f69540-ba3b-4e2f-8277-71bb2293cbad)
-
-
 
 Pendulum Motion: The angle and angular velocity plots show the transient decay due to damping and the steady-state oscillation driven by the external force. The nonlinear and linear solutions are similar because the initial angle (0.1 rad) is small, but the nonlinear solution shows slight deviations at larger amplitudes.
 
