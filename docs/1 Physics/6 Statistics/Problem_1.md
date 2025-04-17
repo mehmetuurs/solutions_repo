@@ -62,19 +62,17 @@ This reinforces the power and generality of the CLT.
 
 
 
-![image](https://github.com/user-attachments/assets/c9d16d37-f3ce-4460-a156-00c8c30ab0a9)
+![image](https://github.com/user-attachments/assets/ea8e5643-202b-4e8c-84d4-50c516477ff5)
 
 
 
 
-![image](https://github.com/user-attachments/assets/519ca34e-f15a-43fa-bf27-5bcef4837681)
+![image](https://github.com/user-attachments/assets/95b73161-a176-4046-99e4-f43928c3d918)
 
 
 
 
-![image](https://github.com/user-attachments/assets/c9edb5c0-dfd4-45fe-abb3-98de0cb40363)
-
-
+![image](https://github.com/user-attachments/assets/09186b78-f68e-4892-b0f3-c8e9fa07064e)
 
 
 
