@@ -119,3 +119,23 @@ $$
 - Calculated:  
   $\overline{T}_{10}$, $\sigma_T$, $\Delta T$, $T$, $g$, $\Delta g$
 - Full uncertainty analysis and comparison to $g = 9.81$
+
+
+```
+
+L = 1.000 m ± 0.0005 m
+T10 measurements: [20.12 20.09 20.15 20.13 20.1  20.11 20.14 20.08 20.16 20.12]
+
+T10_mean = 20.120 s
+T10_std = 0.0258 s
+ΔT10 = 0.0082 s
+
+T = 2.01200 s ± 0.00082 s
+g = 9.752 m/s² ± 0.009 m/s²
+
+
+
+
+
+![pendulum_gravity](https://github.com/user-attachments/assets/0a16e65c-1b2f-4a08-aa28-94ec1bf77ea8)
+
