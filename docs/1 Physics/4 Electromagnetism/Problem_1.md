@@ -127,6 +127,17 @@ We’ll simulate the particle’s motion for the three scenarios, visualize the 
 
 
 
+![lorentz_all_scenarios](https://github.com/user-attachments/assets/a1cab364-a7f1-441b-a167-89d31d1bbe3e)
+
+
+
+
+
+
+
+
+
+
 
 
 
