@@ -47,9 +47,23 @@ A simple 4-node graph with resistors:
 
 ## ⚙️ Algorithm Pseudocode
 
-```plaintext
+
 while graph not reduced:
+
     if a node has exactly 2 neighbors:
         combine series resistors
+
+        
     if parallel resistors exist:
         combine using reciprocal rule
+
+
+
+
+
+
+
+
+![equivalent_resistance_simplification](https://github.com/user-attachments/assets/05640a37-df71-4f8e-9bd9-688e4d0ed97e)
+
+
