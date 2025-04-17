@@ -58,3 +58,21 @@ This reinforces the power and generality of the CLT.
 ## 🧠 Key Insight
 
 > The Central Limit Theorem makes normal distribution the foundation of statistical inference — even when the population isn’t normal.
+
+
+
+
+![image](https://github.com/user-attachments/assets/c9d16d37-f3ce-4460-a156-00c8c30ab0a9)
+
+
+
+
+![image](https://github.com/user-attachments/assets/519ca34e-f15a-43fa-bf27-5bcef4837681)
+
+
+
+
+![image](https://github.com/user-attachments/assets/c9edb5c0-dfd4-45fe-abb3-98de0cb40363)
+
+
+
