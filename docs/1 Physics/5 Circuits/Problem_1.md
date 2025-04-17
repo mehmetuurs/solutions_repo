@@ -59,6 +59,16 @@ while graph not reduced:
 
 
 
+![image](https://github.com/user-attachments/assets/8c04aa86-c735-4fb9-9845-98e4b956ff21)
+
+
+
+
+
+
+
+
+
 
 
 
