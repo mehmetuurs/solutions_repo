@@ -1,6 +1,3 @@
-# Problem 1
-
-
 # 🧪 Problem 1: Measuring Earth's Gravitational Acceleration with a Pendulum
 
 ---
@@ -19,7 +16,9 @@ Measure $g$ using a pendulum and perform a full **uncertainty analysis**. This i
 - Calculating $g$ from the period using the formula  
   $$ g = \frac{4 \pi^2 L}{T^2} $$
 - Propagating the measurement uncertainties  
-  $$ \Delta g = g \sqrt{\left( \frac{\Delta L}{L} \\right)^2 + \left( 2 \cdot \frac{\Delta T}{T} \\right)^2} $$
+  $$
+  \Delta g = g \cdot \sqrt{ \left( \frac{\Delta L}{L} \right)^2 + \left( 2 \cdot \frac{\Delta T}{T} \right)^2 }
+  $$
 
 ---
 
@@ -82,13 +81,18 @@ Measure $g$ using a pendulum and perform a full **uncertainty analysis**. This i
   $$ g = \frac{4 \pi^2 L}{T^2} = 9.760 \, \text{m/s}^2 $$
 
 - Propagated uncertainty:  
-  $$ 
-  \Delta g = g \cdot \sqrt{
-    \left( \frac{\Delta L}{L} \right)^2 +
-    \left( 2 \cdot \frac{\Delta T}{T} \right)^2
-  }
+  $$
+  \Delta g = g \cdot \sqrt{ \left( \frac{\Delta L}{L} \right)^2 + \left( 2 \cdot \frac{\Delta T}{T} \right)^2 }
   = 0.008 \, \text{m/s}^2
   $$
+
+---
+
+## ✅ Final Result
+
+$$
+g = 9.760 \pm 0.008 \, \text{m/s}^2
+$$
 
 ---
 
@@ -115,5 +119,3 @@ Measure $g$ using a pendulum and perform a full **uncertainty analysis**. This i
 - Calculated:  
   $\overline{T}_{10}$, $\sigma_T$, $\Delta T$, $T$, $g$, $\Delta g$
 - Full uncertainty analysis and comparison to $g = 9.81$
-
-
