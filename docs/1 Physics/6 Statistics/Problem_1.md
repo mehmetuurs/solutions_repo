@@ -76,3 +76,13 @@ This reinforces the power and generality of the CLT.
 
 
 
+
+
+
+
+
+![output (1)](https://github.com/user-attachments/assets/0fefc694-6a91-4930-b130-b620b41718d6)
+
+
+
+
