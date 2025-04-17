@@ -172,6 +172,76 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<h1 id="problem-2-estimating-using-monte-carlo-methods">🧮 Problem 2: Estimating π Using Monte Carlo Methods</h1>
+<div style="background-color: #f0f8ff; padding: 15px; border-radius: 10px;">
+<h2 style="color: #2E86C1; text-align: center;">🎲 Monte Carlo Methods: Estimating π Through Randomness</h2>
+</div>
+<hr/>
+<h2 id="motivation">🎯 Motivation</h2>
+<p>Monte Carlo simulations allow us to estimate complex values using randomness. A famous example is estimating <strong>π</strong>, using either:
+- <strong>Geometric probability</strong> (Circle-in-a-Square Method)
+- <strong>Buffon’s Needle</strong> (a probabilistic geometry problem)</p>
+<p>These simulations not only visualize randomness in action but reveal convergence and computational tradeoffs in statistical estimation.</p>
+<hr/>
+<h2 id="part-1-circle-based-monte-carlo-method">🔵 Part 1: Circle-Based Monte Carlo Method</h2>
+<h3 id="theoretical-foundation">📐 Theoretical Foundation</h3>
+<p>A unit circle (radius = 1) inscribed in a square of side length 2 has:</p>
+<ul>
+<li>
+<p>Circle area:<br/>
+  $$ A_{\text{circle}} = πr^2 = π $$</p>
+</li>
+<li>
+<p>Square area:<br/>
+  $$ A_{\text{square}} = (2r)^2 = 4 $$</p>
+</li>
+</ul>
+<p>By randomly generating points in the square and checking if they fall inside the circle:</p>
+<ul>
+<li>
+<p>The ratio of points inside the circle approaches<br/>
+  $$ π/4 $$</p>
+</li>
+<li>
+<p>Therefore:<br/>
+  $$ π \approx 4 \cdot \frac{\text{Points in circle}}{\text{Total points}} $$</p>
+</li>
+</ul>
+<hr/>
+<h2 id="part-2-buffons-needle-simulation">🧪 Part 2: Buffon’s Needle Simulation</h2>
+<h3 id="theoretical-foundation_1">📐 Theoretical Foundation</h3>
+<p>Buffon's Needle experiment estimates π by dropping a needle of length <span class="arithmatex">\(l\)</span> on a plane with parallel lines spaced <span class="arithmatex">\(d\)</span> units apart (<span class="arithmatex">\(l \leq d\)</span>).</p>
+<p>The probability that the needle crosses a line is:<br/>
+$$
+P = \frac{2l}{dπ}
+$$</p>
+<p>Rearranging gives:<br/>
+$$
+π \approx \frac{2l \cdot N}{d \cdot C}
+$$</p>
+<p>Where:
+- <span class="arithmatex">\(N\)</span> = total needle drops<br/>
+- <span class="arithmatex">\(C\)</span> = number of times the needle crosses a line</p>
+<hr/>
+<h2 id="deliverables">📈 Deliverables</h2>
+<ul>
+<li>Circle Method: Plots of random points with circle overlay</li>
+<li>Buffon’s Needle: Plots of needle positions and crossings</li>
+<li>Convergence plots showing how π estimates improve with more samples</li>
+<li>A comparison of both methods in terms of <strong>accuracy</strong> and <strong>efficiency</strong></li>
+</ul>
+<hr/>
+<h2 id="real-world-significance">🌟 Real-World Significance</h2>
+<p>Monte Carlo methods are used in:
+- Physics simulations
+- Risk assessment in finance
+- AI (random search, Monte Carlo Tree Search)
+- Quality control and integration</p>
+<hr/>
+<h2 id="final-insight">🧠 Final Insight</h2>
+<blockquote>
+<p>Monte Carlo methods beautifully illustrate how randomness, probability, and geometry combine to approximate one of the most fundamental constants in mathematics.</p>
+</blockquote>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
