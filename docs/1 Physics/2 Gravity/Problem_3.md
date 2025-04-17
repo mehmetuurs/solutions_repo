@@ -106,11 +106,13 @@ We’ll simulate the payload’s motion for three trajectories (elliptical, para
 
 
 
-![image](https://github.com/user-attachments/assets/d5ef14c9-fbbf-4e8f-b884-133824d934cd)
+![chaotic_payload_trajectories](https://github.com/user-attachments/assets/a5505676-7807-48db-a35d-a80118d8a535)
 
 
 
-![image](https://github.com/user-attachments/assets/7df9c4f9-9bd9-4ebc-a5e5-fce480d5947f)
+
+![orbital_roulette](https://github.com/user-attachments/assets/6005679e-253e-4684-a184-74c4754da366)
+
 
 
 
