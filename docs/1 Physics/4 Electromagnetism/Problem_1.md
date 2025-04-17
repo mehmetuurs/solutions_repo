@@ -85,7 +85,20 @@ We’ll simulate the particle’s motion for the three scenarios, visualize the 
 
 
 
+
+![lorentz_uniform_B_xy_only](https://github.com/user-attachments/assets/47448627-70ec-4018-9bb8-d1f3509b143a)
+
+
+
+
+
+
+
+
+
 ![lorentz_uniform_B](https://github.com/user-attachments/assets/16638062-2d63-48f6-95cf-604084a7faf3)
+
+
 
 
 
