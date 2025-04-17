@@ -172,6 +172,51 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="problem-1-equivalent-resistance-using-graph-theory">🔌 Problem 1: Equivalent Resistance Using Graph Theory</h1>
+<div style="background-color: #f0f8ff; padding: 15px; border-radius: 10px;">
+<h2 style="color: #2E86C1; text-align: center;">📐 Visualizing Circuit Simplification Step-by-Step</h2>
+</div>
+<hr/>
+<h2 id="motivation">🎯 Motivation</h2>
+<p>Calculating equivalent resistance is a fundamental task in circuit analysis. While series and parallel rules work well for simple circuits, <strong>graph theory</strong> provides a powerful, automated way to analyze <strong>complex resistor networks</strong>.</p>
+<p>A circuit is modeled as a graph:
+- <strong>Nodes</strong> represent junctions
+- <strong>Edges</strong> represent resistors (with weights equal to resistance)</p>
+<hr/>
+<h2 id="approach">🧠 Approach</h2>
+<p>We reduce the graph step by step using:</p>
+<ol>
+<li>
+<p>🔗 <strong>Series Reduction</strong><br/>
+   Two resistors in a chain become one with total resistance:<br/>
+   $$ R_{\text{eq}} = R_1 + R_2 $$</p>
+</li>
+<li>
+<p>🔁 <strong>Parallel Reduction</strong><br/>
+   Two or more resistors between the same nodes:<br/>
+   $$ \frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots $$</p>
+</li>
+<li>
+<p>🔄 Repeat until the entire network reduces to a single equivalent resistance.</p>
+</li>
+</ol>
+<hr/>
+<h2 id="example-circuit">🧮 Example Circuit</h2>
+<p>A simple 4-node graph with resistors:</p>
+<ul>
+<li>2Ω between nodes (1)-(2)  </li>
+<li>3Ω between nodes (2)-(3)  </li>
+<li>4Ω between nodes (3)-(4)  </li>
+<li>1Ω directly between nodes (1)-(4)</li>
+</ul>
+<hr/>
+<h2 id="algorithm-pseudocode">⚙️ Algorithm Pseudocode</h2>
+<p>```plaintext
+while graph not reduced:
+    if a node has exactly 2 neighbors:
+        combine series resistors
+    if parallel resistors exist:
+        combine using reciprocal rule</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
