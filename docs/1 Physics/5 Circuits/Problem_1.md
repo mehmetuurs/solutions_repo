@@ -101,3 +101,20 @@ while graph not reduced:
 ![mixed_circuit_simplification](https://github.com/user-attachments/assets/501c110c-8e7d-45bc-bc26-1442481637df)
 
 
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/20dabc35-c0e5-4476-aa87-8f6a8416444b)
+
+
+
+
+
+
+
+
+
+
+
