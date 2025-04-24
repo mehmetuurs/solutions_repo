@@ -77,3 +77,27 @@ while graph not reduced:
 ![equivalent_resistance_simplification](https://github.com/user-attachments/assets/05640a37-df71-4f8e-9bd9-688e4d0ed97e)
 
 
+
+
+
+
+
+
+
+
+
+
+![parallel_circuit_simplification](https://github.com/user-attachments/assets/86f3f4f3-d5ac-4d65-bd10-38c948b57ba3)
+
+
+
+
+
+
+
+
+
+
+![mixed_circuit_simplification](https://github.com/user-attachments/assets/501c110c-8e7d-45bc-bc26-1442481637df)
+
+
