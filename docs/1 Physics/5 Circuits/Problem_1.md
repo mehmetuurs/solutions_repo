@@ -60,13 +60,28 @@ while graph not reduced:
 
 Initial circuit graph:
 Edge 1-2: 2.0Ω
+
+
 Edge 1-4: 1.0Ω
+
+
 Edge 2-3: 3.0Ω
+
+
 Edge 3-4: 4.0Ω
+
+
 Series reduction at node 2: 2.0Ω + 3.0Ω = 5.0Ω
+
+
 Series reduction at node 3: 4.0Ω + 5.0Ω = 9.0Ω
 
+
 Equivalent resistance between nodes 1 and 4: 9.0Ω
+
+
+
+
 
 
 ![image](https://github.com/user-attachments/assets/6e44ec63-df4a-4821-a74c-2e873794a11c)
