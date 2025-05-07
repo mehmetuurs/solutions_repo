@@ -49,17 +49,154 @@ A simple 4-node graph with resistors:
 
 
 while graph not reduced:
-
+ ///
     if a node has exactly 2 neighbors:
         combine series resistors
-
-        
+ ///       
     if parallel resistors exist:
         combine using reciprocal rule
 
 
 
-![image](https://github.com/user-attachments/assets/8c04aa86-c735-4fb9-9845-98e4b956ff21)
+Initial circuit graph:
+Edge 1-2: 2.0Ω
+Edge 1-4: 1.0Ω
+Edge 2-3: 3.0Ω
+Edge 3-4: 4.0Ω
+Series reduction at node 2: 2.0Ω + 3.0Ω = 5.0Ω
+Series reduction at node 3: 4.0Ω + 5.0Ω = 9.0Ω
+
+Equivalent resistance between nodes 1 and 4: 9.0Ω
+
+
+![image](https://github.com/user-attachments/assets/6e44ec63-df4a-4821-a74c-2e873794a11c)
+
+
+
+
+
+
+
+
+
+--- Series Configuration Example ---
+Before simplification:
+o1–o2: 5 Ω
+o2–o3: 3 Ω
+
+
+
+![image](https://github.com/user-attachments/assets/847d778c-5fe5-4d8f-b514-2221605e8f40)
+
+
+
+
+
+
+
+
+
+Series reduction: o1–o2–o3 → o1–o3 = 5 + 3 = 8 Ω
+After simplification:
+o1–o3: 8 Ω
+
+
+
+![image](https://github.com/user-attachments/assets/ff539206-bd5f-4db6-a1e2-dec927daae16)
+
+
+
+
+
+
+
+
+
+
+--- Parallel Configuration Example ---
+Before simplification:
+o1–o3 (key=0): 4 Ω
+o1–o3 (key=1): 6 Ω
+
+
+
+
+![image](https://github.com/user-attachments/assets/8a57bf28-a3eb-4084-8752-2c520b054520)
+
+
+
+
+
+
+
+
+
+
+Parallel reduction: o1 ⇄ o3 → 1/4 + 1/6 = 1/2.40 Ω
+After simplification:
+o1–o3 (key=0): 2.4 Ω
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/6459fe1a-73a7-4a1d-970c-2baca31cbd15)
+
+
+
+
+
+
+
+--- Mixed Configuration Example ---
+Initial mixed circuit:
+1–2: 2 Ω
+2–3: 3 Ω
+2–4: 6 Ω
+3–4: 6 Ω
+4–5: 1 Ω
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/a3bff879-be64-40fc-abe2-838cc3d6107d)
+
+
+
+
+
+
+
+
+Step 1: Parallel between 2–4 and 3–4 → Req = 3Ω
+
+
+
+![image](https://github.com/user-attachments/assets/d3a95d69-5a9e-444f-aa73-30a4da52598c)
+
+
+
+
+
+
+
+Step 2: Series → 2–3 (3Ω) + 2–4 (3Ω) = 6Ω
+
+
+
+![image](https://github.com/user-attachments/assets/2bb0d635-4419-4bd0-8b12-9676c37a8cf9)
+
+
+
+
+
+
+
+Step 3: Series → 1–2 + 2–4 + 4–5 = 2 + 6 + 1 = 9Ω
+
+
+Final equivalent resistance between 1 and 5 = 9 Ω
 
 
 
@@ -74,7 +211,6 @@ while graph not reduced:
 
 
 
-![equivalent_resistance_simplification](https://github.com/user-attachments/assets/05640a37-df71-4f8e-9bd9-688e4d0ed97e)
 
 
 
@@ -87,7 +223,6 @@ while graph not reduced:
 
 
 
-![parallel_circuit_simplification](https://github.com/user-attachments/assets/86f3f4f3-d5ac-4d65-bd10-38c948b57ba3)
 
 
 
@@ -98,7 +233,6 @@ while graph not reduced:
 
 
 
-![mixed_circuit_simplification](https://github.com/user-attachments/assets/501c110c-8e7d-45bc-bc26-1442481637df)
 
 
 
@@ -106,7 +240,17 @@ while graph not reduced:
 
 
 
-![image](https://github.com/user-attachments/assets/20dabc35-c0e5-4476-aa87-8f6a8416444b)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
