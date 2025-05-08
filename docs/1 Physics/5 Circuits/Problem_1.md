@@ -125,7 +125,7 @@ while graph not reduced:
 You can view the circuit in the Falstad Circuit Simulator here:
 
 
-[Open in Falstad]()
+[Open in Falstad](https://tinyurl.com/2yjth3ga)
 
 
 
@@ -220,7 +220,7 @@ You can view the circuit in the Falstad Circuit Simulator here:
 
 You can view the circuit in the Falstad Circuit Simulator here:
 
-[Open in Falstad]()
+[Open in Falstad](https://tinyurl.com/2b3v9p88)
 
 
 
