@@ -58,21 +58,21 @@ while graph not reduced:
 
 
 
-![image](https://github.com/user-attachments/assets/c4778c16-8887-4365-a705-46bd8e8ca5c1)
 
 
 
 
+![image](https://github.com/user-attachments/assets/a35f353d-14b2-48df-9fb6-01356d65398d)
 
 
 
 
-![image](https://github.com/user-attachments/assets/a6c74389-b9df-45a8-9d56-9c698cf5dde5)
 
 
 
 
 
+![image](https://github.com/user-attachments/assets/125b4b91-e407-4a75-8d79-c8169b630316)
 
 
 
@@ -81,9 +81,9 @@ while graph not reduced:
 
 
 
-![image](https://github.com/user-attachments/assets/6b6e93fc-5cab-4288-b3c9-d5701e41853f)
 
 
+![image](https://github.com/user-attachments/assets/f9e9ac9e-0bab-4fd2-95e3-38eb00653eba)
 
 
 
@@ -93,135 +93,5 @@ while graph not reduced:
 
 
 
-
-
-![image](https://github.com/user-attachments/assets/94ed1029-fe05-48ee-8e2f-85c33a90201e)
-
-
-
-
-
-
-
-
-
-
-
-![image](https://github.com/user-attachments/assets/7139a272-e9ac-4a7b-8371-5ab90371b758)
-
-
-
-
-
-
-
-
-
-
-
-
-### 🔗 Falstad Simulation Link
-
-You can view the circuit in the Falstad Circuit Simulator here:
-
-
-[Open in Falstad](https://tinyurl.com/2yjth3ga)
-
-
-
-
-
-
-
-
-
-
-
-![image](https://github.com/user-attachments/assets/247e0309-ac74-4c7b-876e-8baf09f8bfb5)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-![image](https://github.com/user-attachments/assets/bc6051bf-f573-408f-be8b-6abf7d0d5e5b)
-
-
-
-
-
-
-
-
-
-
-
-
-![image](https://github.com/user-attachments/assets/193f48d1-9efe-4ea9-a2f0-1877ea6b10ee)
-
-
-
-
-
-
-
-
-
-
-
-![image](https://github.com/user-attachments/assets/de95ea72-2778-47d2-9966-11f58e692bbe)
-
-
-
-
-
-
-
-
-
-
-
-
-![image](https://github.com/user-attachments/assets/b75811fd-6af3-4d6c-9f5d-841520f85954)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-![image](https://github.com/user-attachments/assets/745bc438-6a2d-4a07-8daf-6a770ee6dfa3)
-
-
-
-
-
-
-
-### 🔗 Falstad Simulation Link
-
-You can view the circuit in the Falstad Circuit Simulator here:
-
-[Open in Falstad](https://tinyurl.com/2b3v9p88)
-
-
-
+![image](https://github.com/user-attachments/assets/585dacf7-3a05-471f-9e5d-b9259af1ff21)
 
