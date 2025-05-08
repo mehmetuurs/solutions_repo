@@ -58,35 +58,30 @@ while graph not reduced:
 
 
 
-Initial circuit graph:
-Edge 1-2: 2.0Ω
 
 
-Edge 1-4: 1.0Ω
+![image](https://github.com/user-attachments/assets/14353eb2-e4e6-46fc-9f0a-2036deb535c6)
 
 
-Edge 2-3: 3.0Ω
 
 
-Edge 3-4: 4.0Ω
 
 
-Series reduction at node 2: 2.0Ω + 3.0Ω = 5.0Ω
+![image](https://github.com/user-attachments/assets/e52742ca-d8fb-44a5-81f9-83cbc9b898b3)
 
 
-Series reduction at node 3: 4.0Ω + 5.0Ω = 9.0Ω
 
 
-Equivalent resistance between nodes 1 and 4: 9.0Ω
 
 
+![image](https://github.com/user-attachments/assets/ec79f9b9-381e-4075-a257-32879c755308)
 
 
 
 
-![image](https://github.com/user-attachments/assets/6e44ec63-df4a-4821-a74c-2e873794a11c)
 
 
+![image](https://github.com/user-attachments/assets/2b8406ff-3a90-4c68-b65a-fd900ef75519)
 
 
 
@@ -94,30 +89,24 @@ Equivalent resistance between nodes 1 and 4: 9.0Ω
 
 
 
---- Series Configuration Example ---
-Before simplification:
-o1–o2: 5 Ω
-o2–o3: 3 Ω
+![image](https://github.com/user-attachments/assets/39c7eeac-62bb-4993-890b-d517160aae8b)
 
 
 
-![image](https://github.com/user-attachments/assets/847d778c-5fe5-4d8f-b514-2221605e8f40)
 
 
 
 
+![image](https://github.com/user-attachments/assets/55d0876f-317e-4a5b-8318-8272e4d37612)
 
 
 
 
 
-Series reduction: o1–o2–o3 → o1–o3 = 5 + 3 = 8 Ω
-After simplification:
-o1–o3: 8 Ω
 
 
 
-![image](https://github.com/user-attachments/assets/ff539206-bd5f-4db6-a1e2-dec927daae16)
+![image](https://github.com/user-attachments/assets/8425cb4d-af97-4c38-b39d-85c7b70d18bf)
 
 
 
@@ -125,18 +114,17 @@ o1–o3: 8 Ω
 
 
 
+![image](https://github.com/user-attachments/assets/d84480d9-c880-4133-8353-4376efd2f316)
 
 
 
---- Parallel Configuration Example ---
-Before simplification:
-o1–o3 (key=0): 4 Ω
-o1–o3 (key=1): 6 Ω
 
 
+### 🔗 Falstad Simulation Link
 
+You can view the circuit in the Falstad Circuit Simulator here:
 
-![image](https://github.com/user-attachments/assets/8a57bf28-a3eb-4084-8752-2c520b054520)
+[Open in Falstad](https://tinyurl.com/22q6m5yy)
 
 
 
@@ -145,37 +133,28 @@ o1–o3 (key=1): 6 Ω
 
 
 
+![image](https://github.com/user-attachments/assets/552e3eb3-f43a-4644-9c45-8dacb346ae64)
 
 
-Parallel reduction: o1 ⇄ o3 → 1/4 + 1/6 = 1/2.40 Ω
-After simplification:
-o1–o3 (key=0): 2.4 Ω
 
 
 
 
 
-![image](https://github.com/user-attachments/assets/6459fe1a-73a7-4a1d-970c-2baca31cbd15)
 
 
+![image](https://github.com/user-attachments/assets/65a8df13-0172-47e7-ba50-b881239edfbc)
 
 
 
 
 
---- Mixed Configuration Example ---
-Initial mixed circuit:
-1–2: 2 Ω
-2–3: 3 Ω
-2–4: 6 Ω
-3–4: 6 Ω
-4–5: 1 Ω
 
 
 
 
+![image](https://github.com/user-attachments/assets/6347cbf8-92ac-42fa-8118-ceb587bc7698)
 
-![image](https://github.com/user-attachments/assets/a3bff879-be64-40fc-abe2-838cc3d6107d)
 
 
 
@@ -184,39 +163,37 @@ Initial mixed circuit:
 
 
 
-Step 1: Parallel between 2–4 and 3–4 → Req = 3Ω
+![image](https://github.com/user-attachments/assets/bba76d98-aa01-4170-a20a-6481ec379638)
 
 
 
-![image](https://github.com/user-attachments/assets/d3a95d69-5a9e-444f-aa73-30a4da52598c)
 
 
 
 
 
 
+![image](https://github.com/user-attachments/assets/e727ee15-b389-454e-b4e4-3c45bf36cf0a)
 
-Step 2: Series → 2–3 (3Ω) + 2–4 (3Ω) = 6Ω
 
 
 
-![image](https://github.com/user-attachments/assets/2bb0d635-4419-4bd0-8b12-9676c37a8cf9)
 
 
 
 
 
+![image](https://github.com/user-attachments/assets/b911faec-9462-4aa6-ae05-23625ea2b4ac)
 
 
-Step 3: Series → 1–2 + 2–4 + 4–5 = 2 + 6 + 1 = 9Ω
 
 
-Final equivalent resistance between 1 and 5 = 9 Ω
 
 
 
 
 
+![image](https://github.com/user-attachments/assets/e6c4ca10-47b4-4065-95ac-a0e8e47cc584)
 
 
 
@@ -226,53 +203,17 @@ Final equivalent resistance between 1 and 5 = 9 Ω
 
 
 
+![image](https://github.com/user-attachments/assets/d2de8654-83eb-4749-99c0-9d588f84b2c1)
 
 
 
 
 
+### 🔗 Falstad Simulation Link
 
+You can view the circuit in the Falstad Circuit Simulator here:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[Open in Falstad](https://tinyurl.com/2d6vmf9v)
 
 
 
